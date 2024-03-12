@@ -9,7 +9,7 @@ Tipe data adalah sebuah pengklasifikasian data berdasarkan data tersebut. Tipe d
 2. Tipe Data Abstrak<br/>
 3. Tipe Data Koleksi<br/>
 
-### Tipe Data Primitif <br/>
+### 1. Tipe Data Primitif <br/>
 
 Tipe data primitif adalah tipe data dasar yang langsung didukung oleh bahasa pemograman dan bisa langsung digunakan oleh programmer untuk deklarasi variabel. tipe data primitif tidak didefinisikan di dalam tipe data yang lain. Misalnya tipe data string, tipe data string tidak termasuk ke dalam tipe data primitif karena mengandung tipe data lain yaitu char. Berikut adalah tipe-tipe data yang termasuk ke dalam tipe data primitif:
 
@@ -33,27 +33,27 @@ Tipe data primitif adalah tipe data dasar yang langsung didukung oleh bahasa pem
 - Floating
 - Double
 
-### Tipe data Abstrak<br/>
+### w. Tipe data Abstrak<br/>
 
 ADT (Abstract Data Type atau Tipe Data Abstrak) adalah suatu model matematika, disertai sekumpulan operasi terhadap model itu (Slamet, 1990:14). ADT adalah kumpulan data dan operasi yang dapat digunakan untuk memanipulasi data yang didefinisikan oleh programmer sendiri untuk memudahkan pemograman. Untuk pembuatan ADT dapat dibuat dalam sebuah class. Fitur class adalah fitur OOP pada C++ yang konsepnya mirip seperti struct pada C++, keduanya dapat menampung variabel sebagai anggota.
 
-1. Class
+1. Class<br/>
 Class adalah cetak biru atau blueprint dari object. Di dalam class dapat mendefinisikan atribut (data) dan metode (tingkah laku) yang akan dimiliki oleh objek yang dibuat berdasarkan Class tersebut. Class memiliki tipe data defaultnya yaitu privat.
 
-2. Struct 
+2. Struct <br/>
 Struct adalah kumpulan variabel dengan beragam tipe data yang dibungkus dalam satu variabel. Di dalam strut dapat mendefinisikan atribut (data) dan metode (tingkah laku) yang akan dimiliki oleh objek yang dibuat berdasarkan struct tersebut. Struct memiliki tipe data defaultnya yaitu public
 
-### Tipe Data Koleksi <br/>
+### 3. Tipe Data Koleksi <br/>
 
 Tipe data koleksi adalah tipe data yang dapat menyimpan beberapa elemen dalam satu variabel. Terdapat beberapa tipe data koleksi di dalam bahasa pemograman C++ yaitu:
 
-1. Array
+1. Array<br/>
 Array adalah tipe data yang digunakan untuk menyimpan beberapa elemen dan nilai dengan tipe data yang sama. Array digunakan untuk menyimpan data sepeti angka, string atau bahkan objek. Array menyimpan banyak elemen atau nilai data yang dapat diambil dengan menggunakan indeks interger mulai dari angka 0,1,2,3, dst.
 
-2. Map 
+2. Map <br/>
 Map mirip dengan array namun dengan index dapat berupa tipe data selain integer. Map adalah tipe data yang dapat menghubungkan key dengan value. Terdapat 2 jenis struktur data map, yaitu std::map yang menggunakan Self_Balancing Tree, khususnya Red Black Tree dan std::unordered_map yang menggunakan hash table.
 
-3. Vector
+3. Vector<br/>
  Vector memiliki bentuk std::vector. Vector mirip dengan array. Ukuran vector dapat berubah secara dinamis yang memungkinkan proses insert dan delete element pada bagian  tengah array. Vector memiliki kemampuan untuk menyimpan data dalam bentuk elemen-elemen yang penempatan memorinya dilakukan secara otomatis bersebelahan.
 
 ## Guided 
@@ -223,8 +223,9 @@ int main()
 #### Output:
 ![Screenshot Output Unguided 1](unguided1_pic.png)
 
-Program tersebut adalah program menghitung luas persegi panjang dengan memasukkan password terlebih dahulu. Program itu menggunakan tipe data primitif dan 2 fungsi yaitu bool untuk fungsi password dan integer untuk fungsi luas persegi panjang. Di dalam fungsi password terdapat percabangan if yang digunakan sebagai true or false dari password. Di dalam fungsi luas persegi panjang terdapat rumus luas persegi panjang untuk mengkalkulasikan. Kemudian di dalam main program terdapat password, user diminta untuk memasukan password yang benar, jika benar maka user dapar mengakses kalkulator pesegi panjang, jika salah maka muncul output "password salah" dan akan keluar dari program.
-Kesimpulan tipe data primitif:
+Program tersebut adalah program menghitung luas persegi panjang dengan memasukkan password terlebih dahulu. Program itu menggunakan tipe data primitif dan 2 fungsi yaitu bool untuk fungsi password dan integer untuk fungsi luas persegi panjang. Di dalam fungsi password terdapat percabangan if yang digunakan sebagai true or false dari password. Di dalam fungsi luas persegi panjang terdapat rumus luas persegi panjang untuk mengkalkulasikan. Kemudian di dalam main program terdapat password, user diminta untuk memasukan password yang benar, jika benar maka user dapar mengakses kalkulator pesegi panjang, jika salah maka muncul output "password salah" dan akan keluar dari program.<rb/>
+
+Kesimpulan tipe data primitif:<br/>
 Tipe data primitif adalah tipe data bawaan dari bahasa pemograman itu sendiri, contohnya yaitu int, float, char, bool dan bisa langsung digunakan oleh programmer.
 
 ### 2. Jelaskan fungsi dari class dan struct secara detail dan berikan contoh programnya!
@@ -298,10 +299,10 @@ int main()
 
 Program tersebut adalah program catatan kendaraan dengan menggunakan struct dan class yang termasuk ke dalam tipe data abstraksi. Di dalam struct dan class terdapat tipe, merek, dan plat dengan tipe data string. Di dalam main program membuat object mobil dari struct dan diisi nilai awal tiap anggotanya setelah itu dicetak. Di dalam class membuat objek dan mengisi nilai awal tiap anggotanya setelah itu dicetak. 
 
-1. Class
+1. Class<br/>
 Class adalah cetak biru atau blueprint dari object. Di dalam class dapat mendefinisikan atribut (data) dan metode (tingkah laku) yang akan dimiliki oleh objek yang dibuat berdasarkan Class tersebut. Class memiliki tipe data defaultnya yaitu privat.
 
-2. Struct 
+2. Struct <br/>
 Struct adalah kumpulan variabel dengan beragam tipe data yang dibungkus dalam satu variabel. Di dalam strut dapat mendefinisikan atribut (data) dan metode (tingkah laku) yang akan dimiliki oleh objek yang dibuat berdasarkan struct tersebut. Struct memiliki tipe data defaultnya yaitu public
 
 Perbedaan dari struct dan class terdapat di inheritance, dimana class dapat melakukan inheritance sedangkan struct tidak bisa. Class lebih banyak digunakan untuk objek yang dimana setiap proses di dalamnya saling berhubungan. Sedangkan struct biasa digunakan untuk struktur data atau objek yang sebenarnya, menyimpan data menggunakan variabel dan membuat fungsi.
@@ -347,10 +348,10 @@ int main() // fungsi main program
 Program di atas adalah program daftar movie dengan menggunakan map. Map termasuk ke dalam tipe data koleksi karena dapat menyimpan beberapa elemen dalam satu variabel. Terdapas struct movie yang di dalamnya terdapat string title, genre dan int year. Di dalam main program terdapat map yang digunakan untuk mengisi nilai dari movie yang nantinya akan dicetak.
 
 Penjelasan array dan map:
-1. Array
+1. Array<br/>
 Array adalah tipe data yang digunakan untuk menyimpan beberapa elemen dan nilai dengan tipe data yang sama. Array digunakan untuk menyimpan data sepeti angka, string atau bahkan objek. Array menyimpan banyak elemen atau nilai data yang dapat diambil dengan menggunakan indeks interger mulai dari angka 0,1,2,3, dst.
 
-2. Map 
+2. Map <br/>
 Map mirip dengan array namun dengan index dapat berupa tipe data selain integer. Map adalah tipe data yang dapat menghubungkan key dengan value. Terdapat 2 jenis struktur data map, yaitu std::map yang menggunakan Self_Balancing Tree, khususnya Red Black Tree dan std::unordered_map yang menggunakan hash table.
 
 Perbedaan array dan map:
@@ -380,7 +381,7 @@ Jadi, array cocok untuk menyimpan elemen dengan tipe data yang sama dan ukuran t
 Tipe data adalah kumpulan data dengan nilai atau jenis yang telah ditetapkan. Tipe data memiliki 3 tipe yaitu primitif, abstrak, dan koleksi. Tipe data primitif adalah tipe data bawaan dari bahasa pemograman itu sendiri, contohnya yaitu int, float, char, bool dan bisa langsung digunakan oleh programmer. Tipe data abstrak adalah tipe data buatan programmer itu sendiri contohnya yaiitu class dan struct. Tipe data koleksi adalah tipe data yang didalamnya dapat memuat berbagai elemen dalam satu variabel contohnya yaitu array, map, dan vector. Setiap kelompok tipe data memiliki peran dan fungsi masing-masing dalam pengembangan program, sesuai dengan kebutuhan dan kompleksitas dari masalah yang akan dipecahkan.
 
 ## Referensi
-[1] Istiqomah, Nalar. (2023). Transformasi Digital. Sukoharjo: Tahta Media.
-[2] Putri, Meidyan P., et al. (2022). "Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung. 
-[3] Khoirudin. (2019). Algoritma & Struktur Data dengan Python 3. Semarang: Universitas Semarang Press.
-[4] Astuti, Indah Kusuma. (2019). Struktur data tipe data real. 
+[1] Istiqomah, Nalar. (2023). Transformasi Digital. Sukoharjo: Tahta Media.<br/>
+[2] Putri, Meidyan P., et al. (2022). "Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung. <br/>
+[3] Khoirudin. (2019). Algoritma & Struktur Data dengan Python 3. Semarang: Universitas Semarang Press.<br/>
+[4] Astuti, Indah Kusuma. (2019). Struktur data tipe data real. <br/>
