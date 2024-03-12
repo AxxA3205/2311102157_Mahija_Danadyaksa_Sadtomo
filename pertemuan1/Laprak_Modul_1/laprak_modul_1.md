@@ -363,7 +363,7 @@ Perbedaan array dan map:
 -  array : berdasarkan indeks numerik
 -  map   : berdasarkan key
 
-3. ukuran:
+3. Ukuran:
 -  array : tetap
 -  map   : dinamis
 
@@ -371,7 +371,7 @@ Perbedaan array dan map:
 -  array : hanya dapat menggunakan tipe data primitif
 -  map   : bisa tipe data apapun
 
-5. indeks:
+5. Indeks:
 -  array : hanya bisa bilangan bulat
 -  map   : bisa berupa nilai apapun
 
