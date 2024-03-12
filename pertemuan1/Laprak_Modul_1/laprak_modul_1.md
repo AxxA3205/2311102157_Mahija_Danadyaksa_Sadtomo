@@ -14,26 +14,26 @@ Tipe data adalah sebuah pengklasifikasian data berdasarkan data tersebut. Tipe d
 Tipe data primitif adalah tipe data dasar yang langsung didukung oleh bahasa pemograman dan bisa langsung digunakan oleh programmer untuk deklarasi variabel. tipe data primitif tidak didefinisikan di dalam tipe data yang lain. Misalnya tipe data string, tipe data string tidak termasuk ke dalam tipe data primitif karena mengandung tipe data lain yaitu char. Berikut adalah tipe-tipe data yang termasuk ke dalam tipe data primitif:
 
 1. Tipe Numerik
-- Integer
-- Floating-point
-- Complex
-- Decimal
+-  Integer
+-  Floating-point
+-  Complex
+-  Decimal
 
 2. Tipe Data Boolean
 
 3. Tipe Data Char
 
 4. Tipe Data Integral
-- Byte
-- Short
-- Int
-- Long
+-  Byte
+-  Short
+-  Int
+-  Long
 
 5. Tipe Floating Point
-- Floating
-- Double
+-  Floating
+-  Double
 
-### w. Tipe data Abstrak<br/>
+### 2. Tipe data Abstrak<br/>
 
 ADT (Abstract Data Type atau Tipe Data Abstrak) adalah suatu model matematika, disertai sekumpulan operasi terhadap model itu (Slamet, 1990:14). ADT adalah kumpulan data dan operasi yang dapat digunakan untuk memanipulasi data yang didefinisikan oleh programmer sendiri untuk memudahkan pemograman. Untuk pembuatan ADT dapat dibuat dalam sebuah class. Fitur class adalah fitur OOP pada C++ yang konsepnya mirip seperti struct pada C++, keduanya dapat menampung variabel sebagai anggota.
 
@@ -356,24 +356,24 @@ Map mirip dengan array namun dengan index dapat berupa tipe data selain integer.
 
 Perbedaan array dan map:
 1. Struktur data:
-- array : urut berdasarkan indeks numerik
-- map   : key-value tanpa urutan tertentu
+-  array : urut berdasarkan indeks numerik
+-  map   : key-value tanpa urutan tertentu
 
 2. Memanggil elemen:
-- array : berdasarkan indeks numerik
-- map   : berdasarkan key
+-  array : berdasarkan indeks numerik
+-  map   : berdasarkan key
 
 3. ukuran:
-- array : tetap
-- map   : dinamis
+-  array : tetap
+-  map   : dinamis
 
 4. Tipe data:
-- array : hanya dapat menggunakan tipe data primitif
-- map   : bisa tipe data apapun
+-  array : hanya dapat menggunakan tipe data primitif
+-  map   : bisa tipe data apapun
 
 5. indeks:
-- array : hanya bisa bilangan bulat
-- map   : bisa berupa nilai apapun
+-  array : hanya bisa bilangan bulat
+-  map   : bisa berupa nilai apapun
 
 Jadi, array cocok untuk menyimpan elemen dengan tipe data yang sama dan ukuran tetap, sedangkan map cocok untuk menghubungkan kunci dengan nilai dalam struktur data yang lebih fleksibel.
 
@@ -382,6 +382,6 @@ Tipe data adalah kumpulan data dengan nilai atau jenis yang telah ditetapkan. Ti
 
 ## Referensi
 [1] Istiqomah, Nalar. (2023). Transformasi Digital. Sukoharjo: Tahta Media.<br/>
-[2] Putri, Meidyan P., et al. (2022). "Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung. <br/>
+[2] Putri, Meidyan P., et al. (2022). Algoritma dan Struktur Data. Bandung: Widina Bhakti Persada Bandung. <br/>
 [3] Khoirudin. (2019). Algoritma & Struktur Data dengan Python 3. Semarang: Universitas Semarang Press.<br/>
 [4] Astuti, Indah Kusuma. (2019). Struktur data tipe data real. <br/>
