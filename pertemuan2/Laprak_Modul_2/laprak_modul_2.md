@@ -10,7 +10,7 @@ Tipe data array adalah tipe data terstruktur yang merujuk kepada sebuah atau sek
 
 ### 1. Array Satu Dimensi
 
-Array satu dimensi adalah array yang disusun dalam satu baris atau satu dimensi. Elemen-elemen dalam array tersebut memiliki indeks tunggal yang berfungsi sebaga urutan array dan digunakan untuk mengakses elemen tersebut. Indeks dalam array dimulai dari angka 0,1,2,3, dan seterusnya. Artinya indeks 0 merujuk pada elemen ke-1 dalam array, indeks 1 merujuk pada elemen ke-2 dalam array, dan seterusnya. Sintaks penulisan array dua dimensi yaitu:<br/>
+Array satu dimensi adalah array yang disusun dalam satu baris atau satu dimensi. Elemen-elemen dalam array tersebut memiliki indeks tunggal yang berfungsi sebaga urutan array dan digunakan untuk mengakses elemen tersebut. Indeks dalam array dimulai dari angka 0,1,2,3, dan seterusnya. Artinya indeks 0 merujuk pada elemen ke-1 dalam array, indeks 1 merujuk pada elemen ke-2 dalam array, dan seterusnya. Sintaks penulisan array satu dimensi yaitu:<br/>
 tipe_data nama_variabel [n] = {elemen};<br/>
 
 Contoh:<br/>
