@@ -178,7 +178,7 @@ int main()
 #### Output:
 ![Screenshot Output Unguided 1](unguided1_pic.png)
 
- program di atas adalah program untuk menampilkan angka genap dan ganjil dari array yang diinputkan oleh user. pertama, program akan meminta user untuk memasukkan panjang array, kemudian program akan meminta user untuk memasukkan angka sepanjang panjang array yang diinputkan. setelah itu program akan menampilkan angka genap dan ganjil dari array yang diinputkan oleh user.
+ program di atas adalah program untuk menampilkan angka genap dan ganjil dari array yang diinputkan oleh user. pertama, program akan meminta user untuk memasukkan panjang array yang disimpan di variabel int maks, kemudian program akan meminta user untuk memasukkan angka sepanjang panjang array yang diinputkan. setelah itu program akan menampilkan angka genap dan ganjil dari array yang diinputkan oleh user.
 
 ### 2. Buatlah program Input array tiga dimensi (seperti pada guided) tetapi jumlah atau ukuran elemennya diinputkan oleh user!
 
@@ -229,7 +229,7 @@ int main() {
 #### Output:
 ![Screenshot Output Unguided 1](unguided2_pic.png)
 
-program di atas adalah progam array multidimensi yaitu berdimensi 3. pertama, program akan meminta input ukuran array 3 dimensi. kemudian program akan meminta input elemen array 3 dimensi. setelah itu program akan menampilkan array 3 dimensi yang dimasukkan.
+program di atas adalah progam array multidimensi yaitu berdimensi 3. pertama, program akan meminta input ukuran array 3 dimensi yang disimpan di variabel int xSize, ySize, zSize. kemudian program akan meminta input elemen array 3 dimensi di dalam pengulangan fot input elemen array. setelah itu program akan menampilkan array 3 dimensi yang dimasukkan.
 
 ### 3. Buatlah program menu untuk mencari nilai Maksimum, Minimum dan Nilai rata – rata dari suatu array dengan input yang dimasukan oleh user!
 
@@ -298,7 +298,7 @@ int main()
 #### Output:
 ![Screenshot Output Unguided 1](unguided3_pic.png)
 
-program di atas adalah program mencari nilai maksimum, minimum, dan rata-rata dari array yang dimasukkan. pertama, program akan meminta input panjang array. kemudian program akan meminta input elemen array. setelah itu program akan menampilkan array yang dimasukkan. kemudian program akan menampilkan nilai maksimum, minimum, dan rata-rata dari array yang dimasukkan.
+program di atas adalah program mencari nilai maksimum, minimum, dan rata-rata dari array yang dimasukkan. pertama, program akan meminta input panjang array yang disimpan di variabel jml. kemudian program akan meminta input elemen array. Setelah itu program akan menampilkan array yang dimasukkan. Kemudian program akan menampilkan nilai maksimum, minimum, dan rata-rata dari array yang dimasukkan.
 
 ## Kesimpulan
 Array adalah tipe data terstruktur yang memuat elemen-elemen dengan tipe data yang sama, diatur melalui indeks, dan dapat diakses menggunakan indeks tersebut. Indeks dalam array dimulai dari indeks 0 yang merujuk pada elemen ke-1 dalam array, indeks 1 merujuk pada elemen ke-2 array, dan seterusnya. Ada tiga jenis array:
