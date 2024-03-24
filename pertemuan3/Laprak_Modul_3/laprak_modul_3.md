@@ -9,7 +9,7 @@
 Tedapat beberapa jenis linked list, yaitu:
 1. Single linked list
 2. Double linked list
-3. Circular linked list
+3. Single Circular linked list
 4. Double Circular linked list
 
 ### Single Linked List
@@ -20,8 +20,8 @@ Single linked list adalah jenis linked list yang hanya memiliki 1 pointer saja. 
 Double Linked List adalah jenis linked list yang memiliki 2 pointer. 1 pointer menunjuk ke node selanjutnya (next) dan 1 lagi menunjuk ke node sebelumnya (prev). Pada node head, pointer prev akan bernilai NULL karena node Head adalah node pertama. Pada node Tail, pointer next akan menunjuk ke NULL.
 ![Double Linked List](Image/doubleLinkedList.png)
 
-### Circluar Linked List
-Circular Linked List adalah linked list yang pointer next-nya menunjuk ke dirinya sendiri, jadi node tail (node terakhir) akan menunjuk ke node head (node pertama).
+### Single Circluar Linked List
+Single Circular Linked List adalah linked list yang pointer next-nya menunjuk ke dirinya sendiri, jadi node tail (node terakhir) akan menunjuk ke node head (node pertama).
 
 ![Circular Linked List](Image/circularLinkedList.png)
 
@@ -473,6 +473,13 @@ Program di atas adalah program yang sama dengan program Guided1.cpp, namun progr
 ## Unguided 
 
 ### 1. Soal mengenai Single Linked List
+Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:
+ㅤa. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.
+ㅤb. Hapus data Akechi
+ㅤc. Tambahkan data berikut diantara John dan Jane: "Futaba 18"
+ㅤd. Tambahkan data berikut di awal: "Igor 20"
+ㅤe. Ubah data Michael menjadi: "Reyn 18"
+ㅤf. Tampilkan seluruh data
 
 ```C++
 
@@ -483,7 +490,13 @@ Program di atas adalah program yang sama dengan program Guided1.cpp, namun progr
 penjelasan coding
 
 ### 2. Soal mengenai Double Linked List
-
+Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga.
+Case:
+ㅤ1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific
+ㅤ2. Hapus produk Wardah
+ㅤ3. Update produk Hanasui menjadi Cleora dengan harga 55000
+ㅤ4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:
+![Screenshot Soal Unguided 2](Image/unguided2_soal.png)
 ```C++
 
 ```
