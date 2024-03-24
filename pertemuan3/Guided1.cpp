@@ -288,4 +288,3 @@ int main() {
 
     return 0;
 }
-// program di atas adalah program single linked list non-circular yang menggunakan bahasa C++. pertama kita deklarasikan struct Node yang berisi data dan pointer next. kemudian kita inisialisasi head dan tail dengan NULL. kemudian kita membuat fungsi-fungsi untuk menambahkan data di depan, belakang, dan tengah. kemudian kita membuat fungsi untuk menghitung jumlah list, menghapus data di depan, belakang, dan tengah, mengubah data di depan, belakang, dan tengah, menghapus semua data, dan menampilkan data. kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. hasilnya adalah sebagai berikut: 3 5 2 3 5 7 3 8 11

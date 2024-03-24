@@ -135,4 +135,3 @@ int main() {
     }
     return 0;
 }
-// program di atas adalah program yang sama dengan program Guided1.cpp, namun program di atas menggunakan konsep class dan object. pertama kita deklarasikan class Node yang berisi data, pointer prev, dan pointer next. kemudian kita deklarasikan class DoublyLinkedList yang berisi pointer head dan pointer tail. kemudian kita buat constructor untuk menginisialisasi head dan tail dengan NULL. kemudian kita buat fungsi push untuk menambahkan data di depan, fungsi pop untuk menghapus data di depan, fungsi update untuk mengubah data, fungsi deleteAll untuk menghapus semua data, dan fungsi display untuk menampilkan data. kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. hasilnya adalah sebagai berikut: 3 5 2 3 5 7 3 8 11

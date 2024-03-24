@@ -309,18 +309,3 @@ int main() {
 
     return 0;
 }
-
-// program di atas merupakan program yang mengimplementasikan linked list dengan menggunakan struct Node yang berisi nama dan umur. Program ini memiliki beberapa fungsi yaitu:
-// 1. insertDepan(string nama, int umur) : untuk menambahkan data di depan
-// 2. insertBelakang(string nama, int umur) : untuk menambahkan data di belakang
-// 3. hitungList() : untuk menghitung jumlah list
-// 4. insertTengah(string nama, int umur, int posisi) : untuk menambahkan data di tengah
-// 5. hapusDepan() : untuk menghapus data di depan
-// 6. hapusBelakang() : untuk menghapus data di belakang
-// 7. hapusTengah(int posisi) : untuk menghapus data di tengah
-// 8. ubahDepan(string nama, int umur) : untuk mengubah data di depan
-// 9. ubahTengah(string nama, int umur, int posisi) : untuk mengubah data di tengah
-// 10. ubahBelakang(string nama, int umur) : untuk mengubah data di belakang
-// 11. clearList() : untuk menghapus semua data
-// 12. tampil() : untuk menampilkan data
-// pertama program akan menampilkan data yang sudah diinputkan. kemudian program akan menghapus data 'Akechi' di posisi 6  dengan menggunakan fungsi hapusTengah(6). kemudian program akan menambahkan data 'Futaba' di posisi 3 dengan menggunakan fungsi insertTengah("Futaba", 18, 3). kemuadian program akan menambahkan data 'Igor' di depan dengan menggunakan fungsi insertDepan("Igor", 20). kemudian program akan mengubah data 'Michael' menjadi 'Reyn' dengan menggunakan fungsi ubahTengah("Reyn", 18, 6). terakhir program akan menampilkan seluruh data dengan menggunakan fungsi tampil().
