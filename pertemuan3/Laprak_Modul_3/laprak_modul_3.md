@@ -474,7 +474,7 @@ Program di atas adalah program yang sama dengan program Guided1.cpp, namun progr
 
 ### 1. Soal mengenai Single Linked List
 Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:<br/>
-ㅤ1. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama <br/> yang dimasukkan adalah nama dan usia anda.<br/>
+ㅤ1. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.<br/>
 ㅤ2. Hapus data Akechi<br/>
 ㅤ3. Tambahkan data berikut diantara John dan Jane: "Futaba 18"<br/>
 ㅤ4. Tambahkan data berikut di awal: "Igor 20"<br/>
@@ -511,3 +511,4 @@ Linked List adalah struktur data yang menyimpan elemen (node) secara berurutan y
 ## Referensi
 [1] Sihombing, Johnson & Ganesha, Politeknik & Gatot, Jl & No, Soebroto & Bandung,. (2020). PENERAPAN STACK DAN QUEUE PADA ARRAY DAN LINKED LIST DALAM JAVA. <br/>
 [2] Abu Sara, M. R., Klaib, M. F. J., & Hasan, M. (2021). Hybrid Array List: An Efficient Dynamic Array with Linked List Structure. Indonesia Journal on Computing (Indo-JC), 5(3), 47-62. <br/>
+[3] Anita Sindar, R. M. S. (2019). Struktur Data Dan Algoritma Dengan C++ (Vol. 1). CV. AA. RIZKY.<br/>
