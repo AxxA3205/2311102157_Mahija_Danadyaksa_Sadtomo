@@ -473,13 +473,13 @@ Program di atas adalah program yang sama dengan program Guided1.cpp, namun progr
 ## Unguided 
 
 ### 1. Soal mengenai Single Linked List
-Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:
-ㅤa. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.
-ㅤb. Hapus data Akechi
-ㅤc. Tambahkan data berikut diantara John dan Jane: "Futaba 18"
-ㅤd. Tambahkan data berikut di awal: "Igor 20"
-ㅤe. Ubah data Michael menjadi: "Reyn 18"
-ㅤf. Tampilkan seluruh data
+Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:<br/>
+ㅤ1. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.<br/>
+ㅤ2. Hapus data Akechi<br/>
+ㅤ3. Tambahkan data berikut diantara John dan Jane: "Futaba 18"<br/>
+ㅤ4. Tambahkan data berikut di awal: "Igor 20"<br/>
+ㅤ5. Ubah data Michael menjadi: "Reyn 18"<br/>
+ㅤ6. Tampilkan seluruh data<br/>
 
 ```C++
 
@@ -490,12 +490,12 @@ Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Us
 penjelasan coding
 
 ### 2. Soal mengenai Double Linked List
-Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga.
-Case:
-ㅤ1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific
-ㅤ2. Hapus produk Wardah
-ㅤ3. Update produk Hanasui menjadi Cleora dengan harga 55000
-ㅤ4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:
+Modifikasi Guided Double Linked List dilakukan dengan penambahan operasi untuk menambah data, menghapus, dan update di tengah / di urutan tertentu yang diminta. Selain itu, buatlah agar tampilannya menampilkan Nama Produk dan Harga.<br/>
+Case:<br/>
+ㅤ1. Tambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific<br/>
+ㅤ2. Hapus produk Wardah<br/>
+ㅤ3. Update produk Hanasui menjadi Cleora dengan harga 55000<br/>
+ㅤ4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:<br/>
 ![Screenshot Soal Unguided 2](Image/unguided2_soal.png)
 ```C++
 
