@@ -474,6 +474,8 @@ Program di atas adalah program yang sama dengan program Guided1.cpp, namun progr
 
 ### 1. Soal mengenai Single Linked List
 Buatlah program menu Single Linked List Non-Circular untuk menyimpan Nama dan Usia mahasiswa, dengan menggunakan inputan dari user. Lakukan operasi berikut:<br/>
+![Screenshot Soal Unguided 1](Image/unguided1_soal.png)
+
 ㅤ1. Masukkan data sesuai urutan berikut. (Gunakan insert depan, belakang atau tengah). Data pertama yang dimasukkan adalah nama dan usia anda.<br/>
 ㅤ2. Hapus data Akechi<br/>
 ㅤ3. Tambahkan data berikut diantara John dan Jane: "Futaba 18"<br/>
