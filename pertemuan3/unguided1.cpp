@@ -1,10 +1,14 @@
+//Coding Milik Mahija Danadyaksa Sadtomo (2311102157)
+
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
-//Deklarasi Struct Node
+//Deklarasi Struct Node yang berisi nama dan umur
 struct Node {
-    int data;
+    string nama23;
+    int umur23;
     Node* next;
 };
 
@@ -26,10 +30,11 @@ bool isEmpty() {
 }
 
 //Tambah Depan
-void insertDepan(int nilai) {
+void insertDepan(string nama, int umur) {
     //Buat Node baru
     Node* baru = new Node;
-    baru->data = nilai;
+    baru->nama23 = nama;
+    baru->umur23 = umur;
     baru->next = NULL;
 
     if (isEmpty() == true) {
@@ -43,10 +48,11 @@ void insertDepan(int nilai) {
 }
 
 //Tambah Belakang
-void insertBelakang(int nilai) {
+void insertBelakang(int nama, int umur) {
     //Buat Node baru
     Node* baru = new Node;
-    baru->data = nilai;
+    baru->nama23 = nama;
+    baru->umur23 = umur;
     baru->next = NULL;
 
     if (isEmpty() == true) {
@@ -74,7 +80,7 @@ int hitungList() {
 }
 
 //Tambah Tengah
-void insertTengah(int data, int posisi) {
+void insertTengah(string nama,int umur, int posisi) {
     if (posisi < 1 || posisi > hitungList()) {
         cout << "Posisi diluar jangkauan" << endl;
     }
@@ -84,7 +90,8 @@ void insertTengah(int data, int posisi) {
     else {
         Node* baru, * bantu;
         baru = new Node();
-        baru->data = data;
+        baru->nama23 = nama;
+        baru->umur23 = umur;
 
         // tranversing
         bantu = head;
@@ -179,9 +186,10 @@ void hapusTengah(int posisi) {
 }
 
 //Ubah Depan
-void ubahDepan(int data) {
+void ubahDepan(string nama, int umur) {
     if (isEmpty() == false) {
-        head->data = data;
+        head->nama23 = nama;
+        head->umur23 = umur;
     }
     else {
         cout << "List masih kosong!" << endl;
@@ -189,7 +197,7 @@ void ubahDepan(int data) {
 }
 
 //Ubah Tengah
-void ubahTengah(int data, int posisi) {
+void ubahTengah(string nama,int umur, int posisi) {
     Node* bantu;
 
     if (isEmpty() == false) {
@@ -208,7 +216,8 @@ void ubahTengah(int data, int posisi) {
                 nomor++;
             }
 
-            bantu->data = data;
+            bantu->nama23 = nama;
+            bantu->umur23 = umur;
         }
     }
     else {
@@ -217,9 +226,10 @@ void ubahTengah(int data, int posisi) {
 }
 
 //Ubah Belakang
-void ubahBelakang(int data) {
+void ubahBelakang(string nama, int umur) {
     if (isEmpty() == false) {
-        tail->data = data;
+        tail->nama23 = nama;
+        tail->umur23 = umur;
     }
     else {
         cout << "List masih kosong!" << endl;
@@ -246,9 +256,10 @@ void tampil() {
     Node* bantu;
     bantu = head;
 
+    cout<< left << setw(20) << "Nama" << setw(20) << "Umur" << endl;
     if (isEmpty() == false) {
         while (bantu != NULL) {
-            cout << bantu->data << ends;
+            cout << left << setw(20) << bantu->nama23 << setw(20) << bantu->umur23 << endl;
             bantu = bantu->next;
         }
 
@@ -261,28 +272,55 @@ void tampil() {
 
 int main() {
     init();
-    insertDepan(3);
+    // Tampilan awal
+    cout<<"===== A) NAMA DAN UMUR  (A =====\n";
+    insertDepan("Karin", 18);
+    insertDepan("Hoshino", 18);
+    insertDepan("Akechi", 20);
+    insertDepan("Yusuke", 19);
+    insertDepan("Michael", 18);
+    insertDepan("Jane", 20);
+    insertDepan("John", 19);
+    insertDepan("Aksa", 19);
     tampil();
-    insertBelakang(5);
+
+    // Tampilan setelah menghapus akechi di posisi 6
+    cout<<"===== B) Hapus 'Akechi' (B =====\n";
+    hapusTengah(6);
     tampil();
-    insertDepan(2);
+
+    // Tampilan setelah menambahkan futaba di posisi 3
+    cout<<"===== C) Insert 'Futaba' (C =====\n";
+    insertTengah("Futaba", 18, 3);
     tampil();
-    insertDepan(1);
+
+    // Tampilan setelah menambahkan igor di depan
+    cout<<"===== D) Insert 'Igor' (D =====\n";
+    insertDepan("Igor", 20);
     tampil();
-    hapusDepan();
-    tampil();
-    hapusBelakang();
-    tampil();
-    insertTengah(7, 2);
-    tampil();
-    hapusTengah(2);
-    tampil();
-    ubahDepan(1);
-    tampil();
-    ubahBelakang(8);
-    tampil();
-    ubahTengah(11, 2);
+
+    // Tampilan setelah mengubah michael menjadi reyn
+    cout<<"===== E) Ubah 'Michael' menjadi 'Reyn'(E =====\n";
+    ubahTengah("Reyn", 18, 6);
+
+    // Tampilan terakhir
+    cout<<"===== F) Tampilan Seluruh Data (F =====\n";
     tampil();
 
     return 0;
 }
+
+// program di atas merupakan program yang mengimplementasikan linked list dengan menggunakan struct Node yang berisi nama dan umur. Program ini memiliki beberapa fungsi yaitu:
+// 1. insertDepan(string nama, int umur) : untuk menambahkan data di depan
+// 2. insertBelakang(string nama, int umur) : untuk menambahkan data di belakang
+// 3. hitungList() : untuk menghitung jumlah list
+// 4. insertTengah(string nama, int umur, int posisi) : untuk menambahkan data di tengah
+// 5. hapusDepan() : untuk menghapus data di depan
+// 6. hapusBelakang() : untuk menghapus data di belakang
+// 7. hapusTengah(int posisi) : untuk menghapus data di tengah
+// 8. ubahDepan(string nama, int umur) : untuk mengubah data di depan
+// 9. ubahTengah(string nama, int umur, int posisi) : untuk mengubah data di tengah
+// 10. ubahBelakang(string nama, int umur) : untuk mengubah data di belakang
+// 11. clearList() : untuk menghapus semua data
+// 12. tampil() : untuk menampilkan data
+// pertama program akan menampilkan data yang sudah diinputkan. kemudian program akan menghapus data 'Akechi' di posisi 6  dengan menggunakan fungsi hapusTengah(6). kemudian program akan menambahkan data 'Futaba' di posisi 3 dengan menggunakan fungsi insertTengah("Futaba", 18, 3). kemuadian program akan menambahkan data 'Igor' di depan dengan menggunakan fungsi insertDepan("Igor", 20). kemudian program akan mengubah data 'Michael' menjadi 'Reyn' dengan menggunakan fungsi ubahTengah("Reyn", 18, 6). terakhir program akan menampilkan seluruh data dengan menggunakan fungsi tampil().
