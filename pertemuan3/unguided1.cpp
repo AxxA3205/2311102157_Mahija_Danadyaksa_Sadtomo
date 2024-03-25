@@ -1,27 +1,27 @@
 //Coding Milik Mahija Danadyaksa Sadtomo (2311102157)
 
-#include <iostream>
-#include <iomanip>
+#include <iostream> // Library yang digunakan untuk input dan output
+#include <iomanip> // Library yang digunakan untuk manipulasi output
 
-using namespace std;
+using namespace std; // Untuk mempersingkat penulisan kode agar tidak perlu menuliskan std:: pada setiap fungsi
 
 //Deklarasi Struct Node yang berisi nama dan umur
 struct Node {
     string nama23;
     int umur23;
-    Node* next;
+    Node* next; // Pointer ke node selanjutnya
 };
 
-Node* head;
-Node* tail;
+Node* head; // Deklarasi head
+Node* tail; // Deklarasi tail
 
-//Inisialisasi Node
+//Inisialisasi Node (head dan tail)
 void init() {
     head = NULL;
     tail = NULL;
 }
 
-// Pengecekan
+// Pengecekan apakah list kosong atau tidak
 bool isEmpty() {
     if (head == NULL)
         return true;
@@ -49,6 +49,7 @@ void insertDepan(string nama, int umur) {
 
 //Tambah Belakang
 void insertBelakang(int nama, int umur) {
+
     //Buat Node baru
     Node* baru = new Node;
     baru->nama23 = nama;
@@ -93,7 +94,7 @@ void insertTengah(string nama,int umur, int posisi) {
         baru->nama23 = nama;
         baru->umur23 = umur;
 
-        // tranversing
+        // tranversing 
         bantu = head;
         int nomor = 1;
 
@@ -272,6 +273,7 @@ void tampil() {
 
 int main() {
     init();
+
     // Tampilan awal
     cout<<"===== A) NAMA DAN UMUR  (A =====\n";
     insertDepan("Karin", 18);

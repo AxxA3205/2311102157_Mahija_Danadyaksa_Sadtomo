@@ -812,6 +812,7 @@ program di atas merupakan program yang mengimplementasikan linked list dengan me
 10. ubahBelakang(string nama, int umur) : untuk mengubah data di belakang
 11. clearList() : untuk menghapus semua data
 12. tampil() : untuk menampilkan data
+13. main() : Fungsi utama yang digunakan untuk menjalankan program
 
 Di dalam main program, pertama program akan menampilkan data yang sudah diinputkan. Kedua program akan menghapus data 'Akechi' di posisi 6  dengan menggunakan fungsi hapusTengah(6). Ketiga program akan menambahkan data 'Futaba' di posisi 3 dengan menggunakan fungsi insertTengah("Futaba", 18, 3). keempat program akan menambahkan data 'Igor' di depan dengan menggunakan fungsi insertDepan("Igor", 20). kelima program akan mengubah data 'Michael' menjadi 'Reyn' dengan menggunakan fungsi ubahTengah("Reyn", 18, 6). Terakhir program akan menampilkan seluruh data dengan menggunakan fungsi tampil().
 
@@ -824,12 +825,307 @@ Case:<br/>
 ㅤ4. Tampilkan menu, di mana tampilan akhirnya akan menjadi seperti dibawah ini:<br/>
 ![Screenshot Soal Unguided 2](Image/unguided2_soal.png)
 ```C++
+// Coding milik Mahija Danadyaksa Sadtomo 2311102157
+#include <iostream> // Library yang digunakan untuk input dan output
+#include <iomanip> // Library yang digunakan untuk manipulasi output
 
+using namespace std; // Untuk mempersingkat penulisan kode agar tidak perlu menuliskan std:: pada setiap fungsi   
+
+// Deklarasi class Node yang berisi produk dan harga
+class Node {
+public:
+    string produk23;
+    int harga23;
+    Node* prev; // Pointer ke node sebelumnya
+    Node* next; // Pointer ke node selanjutnya
+};
+
+// Deklarasi class DoublyLinkedList
+class DoublyLinkedList {
+public:
+    Node* head; // Deklarasi head
+    Node* tail; // Deklarasi tail
+
+    // pembuatan double linked list 
+    DoublyLinkedList() {
+        head = nullptr; // Inisialisasi head
+        tail = nullptr; // Inisialisasi tail
+    }
+
+    // Menambahkan data
+    void push(string produk, int harga) {
+        Node* newNode = new Node;
+        newNode->produk23 = produk;
+        newNode->harga23 = harga;
+        newNode->prev = nullptr;
+        newNode->next = head;
+        if (head != nullptr) {
+            head->prev = newNode;
+        }
+        else {
+            tail = newNode;
+        }
+        head = newNode;
+    }
+    
+    // Menambahkan data pada posisi tertentu
+    void pushPosisi(string produk, int harga, int posisi) {
+    Node* newNode = new Node;
+    newNode->produk23 = produk;
+    newNode->harga23 = harga;
+
+    // Pengecekan posisi, kurang dari 0 atau sama dengan 0
+    if (posisi <= 0) {  
+        cout << "Posisi tidak valid" << endl;
+        delete newNode;
+        return;
+    }
+
+    // Pengecekan posisi, sama dengan 1 maka akan menambahkan data pada posisi pertama (head)
+    if (posisi == 1) {  
+        newNode->prev = nullptr;
+        newNode->next = head;
+        if (head != nullptr) {
+            head->prev = newNode;
+        } else {
+            tail = newNode;
+        }
+        head = newNode;
+        return;
+    }
+
+    Node* current = head;
+    int currentPosition = 1;  // Inisialisasi posisi saat ini
+    while (currentPosition < posisi - 1 && current != nullptr) {
+        current = current->next;
+        currentPosition++;
+    }
+
+    // Pengecekan posisi, jika posisi yang diminta melebihi panjang daftar maka posisi tidak valid
+    if (current == nullptr) { 
+        cout << "Posisi tidak valid" << endl;
+        delete newNode;
+        return;
+    }
+
+    newNode->prev = current;
+    newNode->next = current->next;
+    if (current->next != nullptr) {
+        current->next->prev = newNode;
+    } else {
+        tail = newNode;
+    }
+    current->next = newNode;
+}
+
+    // Menghapus data
+    void pop() {
+        if (head == nullptr) {
+            return;
+        }
+        Node* temp = head;
+        head = head->next;
+        if (head != nullptr) {
+            head->prev = nullptr;
+        }
+        else {
+            tail = nullptr;
+        }
+        delete temp;
+    }
+
+    // Menghapus data pada posisi tertentu
+   void popPosisi(int posisi) {
+    // Pengecekan posisi, kurang dari 0 atau sama dengan 0
+    if (posisi <= 0 || head == nullptr) {
+        cout << "Posisi tidak valid atau daftar kosong" << endl;
+        return;
+    }
+
+    Node* current = head;
+    int currentPosition = 1; // Inisialisasi posisi saat ini
+    while (currentPosition < posisi && current != nullptr) {
+        current = current->next;
+        currentPosition++;
+    }
+
+    // Pengecekan posisi, jika posisi yang diminta melebihi panjang daftar maka posisi tidak valid
+    if (current == nullptr) {
+        cout << "Posisi tidak valid" << endl;
+        return;
+    }
+
+    if (current->prev != nullptr) {
+        current->prev->next = current->next;
+    } else {
+        head = current->next;
+    }
+
+    if (current->next != nullptr) {
+        current->next->prev = current->prev;
+    } else {
+        tail = current->prev;
+    }
+
+    delete current;
+}
+
+    // Mengupdate data
+    bool update(string oldProduk, string newProduk, int newHarga) {
+        Node* current = head;
+        while (current != nullptr) {
+            if (current->produk23 == oldProduk) {
+                current->produk23 = newProduk;\
+                current->harga23 = newHarga;
+                return true;
+            }
+            current = current->next;
+        }
+        return false;
+    }
+
+    // Menghapus semua data
+    void deleteAll() {
+        Node* current = head;
+        while (current != nullptr) {
+            Node* temp = current;
+            current = current->next;
+            delete temp;
+        }
+        head = nullptr;
+        tail = nullptr;
+    }
+
+    //  Menampilkan data
+    void display() {
+        Node* current = head;
+        cout << left << setw(20) << "Produk" << right <<setw(20) << "Harga" << endl;
+        while (current != nullptr) {
+            cout << left << setw(20) << current->produk23 << right << setw(20) << current->harga23 << endl;
+            current = current->next;
+        }
+        cout << endl;
+    }
+};
+
+int main() {
+    DoublyLinkedList list;
+    cout << "==========Daftar Produk==========" << endl;
+    list.push("Hanasui", 30000);
+    list.push("Wardah", 50000);
+    list.push("Skintific", 100000);
+    list.push("Somethinc", 150000);
+    list.push("Originote", 60000);
+    list.display();
+
+    while (true) {
+        cout << "==========Menu CRUD==========" << endl;
+        cout << "1. Insert Produk" << endl;
+        cout << "2. Delete Produk" << endl;
+        cout << "3. Update Produk" << endl;
+        cout << "4. Clear Produk" << endl;
+        cout << "5. Insert Produk Berdasarkan Urutan" << endl;
+        cout << "6. Delete produk berdasarkan Urutan" << endl;
+        cout << "7. Display Produk" << endl;
+        cout << "8. Exit" << endl;
+        int choice;
+        cout << "Enter your choice: ";
+        cin >> choice;
+        switch (choice) {
+            case 1: {
+                string produk;
+                int harga;
+                cout << "Masukan produk baru: ";
+                cin >> produk;
+                cout << "Masukan harga produk baru: ";
+                cin >> harga;
+                list.push(produk, harga);
+                cout<< "Produk berhasil ditambahkan" << endl;
+                break;
+            }
+            case 2: {
+                list.pop();
+                cout << "Produk paling atas berhasil dihapus" << endl;
+                break;
+            }
+            case 3: {
+                string oldProduk, newProduk;
+                int newHarga;
+                cout << "Masukan nama produk yang ingin di update: ";
+                cin >> oldProduk;
+                cout << "Masukan nama produk baru: ";
+                cin >> newProduk;
+                cout << "Masukan harga baru: ";
+                cin >> newHarga;
+                bool updated = list.update(oldProduk, newProduk, newHarga);
+                if (!updated) {
+                    cout << "Produk tidak ditemukan" << endl;
+                }
+                else {
+                    cout << "Produk berhasil diupdate" << endl;
+                }
+                break;
+            }
+            case 4: {
+                list.deleteAll();
+                cout << "Produk berhasil dihapus semua" << endl;
+                break;
+            }
+            case 5: {
+                string produk;
+                int harga, posisi;
+                cout << "Masukan nama produk baru: ";
+                cin >> produk;
+                cout << "Masukan harga produk baru: ";
+                cin >> harga;
+                cout << "Masukan posisi produk baru: ";
+                cin >> posisi;
+                list.pushPosisi(produk, harga, posisi);
+                cout << "Produk baru berhasil ditambahkan pada posisi " << posisi << endl;
+                break;
+            }
+            case 6: {
+                int posisi;
+                cout << "Masukan posisi produk yang ingin dihapus: ";
+                cin >> posisi;
+                list.popPosisi(posisi);
+                cout << "Produk pada posisi " << posisi << " berhasil dihapus" << endl;
+                break;
+            }
+            case 7: {
+                list.display();
+                break;
+            }
+            case 8: {
+                return 0;
+            }
+            default: {
+                cout << "Pilihan tidak sesuai!" << endl;
+                break;
+            }
+        }
+    }
+    return 0;
+}
 ```
 #### Output:
-![Screenshot Output Unguided 1](unguided2_pic.png)
+![Screenshot Output Unguided 2](unguided2_pic(1).png)
+![Screenshot Output Unguided 2](unguided2_pic(2).png)
 
-penjelasan coding
+program di atas adalah program yang digunakan untuk menambahkan, menghapus, mengupdate, dan menampilkan data produk dan harga dengan menggunakan metode double linked list. Di dalam program tersebut terdapat beberapa fungsi, yaitu:
+1. push() : Menambahkan data pada posisi pertama (head)
+2. pushPosisi() : Menambahkan data pada posisi tertentu
+3. pop() : Menghapus data pada posisi pertama (head)
+4. popPosisi() : Menghapus data pada posisi tertentu
+5. update() : Mengupdate data
+6. deleteAll() : Menghapus semua data
+7. display() : Menampilkan data
+8. main() : Fungsi utama yang digunakan untuk menjalankan program
+
+
+Pertama program akan menampilkan produk dan harga yang sudah diinputkan. Kemudian program akan menampilkan menu yang berisi pilihan untuk menambahkan, menghapus, mengupdate, dan menampilkan data produk dan harga. Setelah itu, program akan meminta inputan dari user sesuai dengan pilihan yang diinginkan. Kemudian program akan mengeksekusi pilihan yang diinputkan oleh user. Program akan terus berjalan hingga user memilih untuk keluar dari program.
+
+Pada saat run program, user menambahkan produk Azarine dengan harga 65000 diantara Somethinc dan Skintific dengan menggunakan fungsi pushPosisi() dengan inputan posisi 3. Setelah itu user menghapus produk Wardah dengan menggunakan popPosisi() pada posisi ke 5. Kemudian user mengupdate produk Hanasui menjadi Cleora dengan harga 55000 dengan menggunakan fungsi update(). Terakhir user diminta untuk menampilkan tampilan akhir setelah dilakukan beberapa perubahan.
 
 ## Kesimpulan
 Linked List adalah struktur data yang menyimpan elemen (node) secara berurutan yang dihubungkan dengan pointer yaitu head dan tail. Linked list memiliki batas data yang dinamis tidak seperti array yang statis. Tedapat bermacam-macam jenis pada linked list, yaitu Single Linked List, Double Linked List, Single Circular Linked List, dan Double Circular Linked List. Kegunaan dari linked list sendiri yaitu memudahkan dalam menyisipkan dan menghapus data secara dinamis dan memungkinkan alokasi dan dealokasi memori dengan lebih fleksibel.
