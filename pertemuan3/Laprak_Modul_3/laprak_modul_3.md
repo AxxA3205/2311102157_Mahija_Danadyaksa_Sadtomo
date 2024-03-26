@@ -883,7 +883,9 @@ Program di atas merupakan program yang mengimplementasikan linked list dengan me
 9. clearList() : untuk menghapus semua data
 10. tampil() : untuk menampilkan data
 11. main() : Fungsi utama yang digunakan untuk menjalankan program<br/>
+
 di dalam main program terdapat perulangan while yang digunakan untuk menampilkan menu pilihan yang dapat dipilih oleh user. Pilihan yang dapat dipilih oleh user adalah:
+
 1. Tambah Depan
 2. Tambah Belakang
 3. Tambah Tengah
@@ -894,6 +896,7 @@ di dalam main program terdapat perulangan while yang digunakan untuk menampilkan
 8. Hapus Semua
 9. Tampilkan Data
 10. Exit<br/>
+
 User dapat memilih pilihan yang diinginkan dengan memasukkan angka yang sesuai dengan pilihan yang diinginkan. Setelah user memilih pilihan, program akan menjalankan fungsi yang sesuai dengan pilihan yang dipilih oleh user.
 
 ### 2. Soal mengenai Double Linked List
