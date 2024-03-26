@@ -865,11 +865,11 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot Output Unguided 1](unguided1_pic(1).png)
-![Screenshot Output Unguided 1](unguided1_pic(2).png)
-![Screenshot Output Unguided 1](unguided1_pic(3).png)
-![Screenshot Output Unguided 1](unguided1_pic(4).png)
-![Screenshot Output Unguided 1](unguided1_pic(5).png)
+![Screenshot Output Unguided 1 pic 1](unguided1_pic(1).png)
+![Screenshot Output Unguided 1 pic 2](unguided1_pic(2).png)
+![Screenshot Output Unguided 1 pic 3](unguided1_pic(3).png)
+![Screenshot Output Unguided 1 pic 4](unguided1_pic(4).png)
+![Screenshot Output Unguided 1 pic 5](unguided1_pic(5).png)
 
 Program di atas merupakan program yang mengimplementasikan linked list dengan menggunakan struct Node yang berisi string nama23 dan int umur23 dan Node *next. Program ini memiliki beberapa fungsi yaitu:
 1. insertDepan(string nama, int umur) : untuk menambahkan data di depan
@@ -1189,8 +1189,8 @@ int main() {
 }
 ```
 #### Output:
-![Screenshot Output Unguided 2](unguided2_pic(1).png)
-![Screenshot Output Unguided 2](unguided2_pic(2).png)
+![Screenshot Output Unguided 2 pic 1](unguided2_pic(1).png)
+![Screenshot Output Unguided 2 pic 2](unguided2_pic(2).png)
 
 program di atas adalah program yang digunakan untuk menambahkan, menghapus, mengupdate, dan menampilkan data produk dan harga dengan menggunakan metode double linked list. Di dalam program tersebut terdapat beberapa fungsi, yaitu:
 1. push() : Menambahkan data pada posisi pertama (head)
