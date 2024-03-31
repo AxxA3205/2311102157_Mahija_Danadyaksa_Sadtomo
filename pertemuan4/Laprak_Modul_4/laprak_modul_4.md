@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 3 - Linked List </h1>
+# <h1 align="center">Laporan Praktikum Modul 4 - Single Linked List Circular dan Non Circular </h1>
 <p align="center">Mahija Danadyaksa Sadtomo_2311102157</p>
 
 ## Dasar Teori
@@ -12,12 +12,12 @@ Tedapat beberapa jenis linked list, yaitu:
 3. Single Circular linked list
 4. Double Circular linked list
 
-### Single Linked List
-Single linked list adalah jenis linked list yang hanya memiliki 1 pointer saja. Pointer digunakan untuk menunjuk node selanjutnya (next), kecuali pada node tail atau node terakhir yang pointernya menunjuk ke NULL.
+### Single Linked List Non Circular
+Single linked list Non Circular adalah jenis linked list yang hanya memiliki 1 pointer saja. Pointer digunakan untuk menunjuk node selanjutnya (next), kecuali pada node tail atau node terakhir yang pointernya menunjuk ke NULL.
 ![Single Linked List](Image/singleLinkedList.png)
 
-### Double Linked List
-Double Linked List adalah jenis linked list yang memiliki 2 pointer. 1 pointer menunjuk ke node selanjutnya (next) dan 1 lagi menunjuk ke node sebelumnya (prev). Pada node head, pointer prev akan bernilai NULL karena node Head adalah node pertama. Pada node Tail, pointer next akan menunjuk ke NULL.
+### Double Linked List Non Circular
+Double Linked List Non Circular adalah jenis linked list yang memiliki 2 pointer. 1 pointer menunjuk ke node selanjutnya (next) dan 1 lagi menunjuk ke node sebelumnya (prev). Pada node head, pointer prev akan bernilai NULL karena node Head adalah node pertama. Pada node Tail, pointer next akan menunjuk ke NULL.
 ![Double Linked List](Image/doubleLinkedList.png)
 
 ### Single Circluar Linked List
@@ -29,7 +29,10 @@ Jadi, Single Circular Linked List adalah linked list yang pointer next-nya menun
 ![Circular Linked List](Image/circularLinkedList.png)
 
 ### Double Circular Linked List
-Double Circular Linked List adalah linked list yang pointer next dan pointer prev-nya menunjuk ke dirinya sendiri secara circular.
+Double: artinya field pointer-nya terdiri dari dua buah dan dua arah, yaitu prev dan next <br/>
+Circular : artinya pointer next-nya akan menunjuk pada dirinya sendiri
+sehingga berputar. <br/>
+Jadi, Double Circular Linked List adalah linked list yang pointer next dan pointer prev-nya menunjuk ke dirinya sendiri secara circular.
 
 ![Double Circular Linked List](Image/doubleCircularLinkedList.png)
 
