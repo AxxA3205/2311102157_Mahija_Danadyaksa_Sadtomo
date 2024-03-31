@@ -366,17 +366,17 @@ bool isEmpty()
     }
 ```
 Program di atas adalah program single linked list non-circular yang menggunakan bahasa C++. Pertama kita deklarasikan struct Node yang berisi data dan pointer next. Kemudian kita inisialisasi head dan tail dengan NULL. Kemudian kita membuat fungsi-fungsi untuk menambahkan data di depan, belakang, dan tengah. Kemudian kita membuat fungsi untuk menghitung jumlah list, menghapus data di depan, belakang, dan tengah, mengubah data di depan, belakang, dan tengah, menghapus semua data, dan menampilkan data. Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah sebagai berikut:
-3
-3 5
-2 3 5
-1 2 3 5
-2 3 5
-2 3
-2 7 3
-2 3
-1 3
-1 8
-1 11
+3 <br/>
+3 5 <br/>
+2 3 5 <br/>
+1 2 3 5 <br/>
+2 3 5 <br/>
+2 3 <br/>
+2 7 3 <br/>
+2 3 <br/>
+1 3 <br/>
+1 8 <br/>
+1 11 <br/>
 
 ### 2. Latihan Single Linked List Circular
 ```c++
@@ -602,15 +602,15 @@ int main(){
     return 0;
 }
 ```
-Program di atas adalah program list data dengan menggunakan single linked list circular yang di dalamnya menggunakan struct Node yang berisi string data dan pointer next. Pertama kita deklarasikan struct Node yang berisi string data dan pointer next. Lalu kita deklarasikan variabel head, tail, baru, bantu, dan hapus yang bertipe pointer Node. Lalu kita membuat fungsi menambahkan data di depan, belakang, dan tengah; menghapus data di depan, belakang, dan tengah; menghitung jumlah data; menampilkan data; dan menghapus semua data. Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah:
-Ayam
-Bebek Ayam
-Bebek Ayam Cicak
-Bebek Ayam Cicak Domba
-Bebek Ayam Cicak
-Ayam Cicak
-Ayam Sapi Cicak
-Ayam Cicak
+Program di atas adalah program list data dengan menggunakan single linked list circular yang di dalamnya menggunakan struct Node yang berisi string data dan pointer next. Pertama kita deklarasikan struct Node yang berisi string data dan pointer next. Lalu kita deklarasikan variabel head, tail, baru, bantu, dan hapus yang bertipe pointer Node. Lalu kita membuat fungsi menambahkan data di depan, belakang, dan tengah; menghapus data di depan, belakang, dan tengah; menghitung jumlah data; menampilkan data; dan menghapus semua data. Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah: <br/>
+Ayam <br/>
+Bebek Ayam <br/>
+Bebek Ayam Cicak <br/>
+Bebek Ayam Cicak Domba <br/>
+Bebek Ayam Cicak <br/>
+Ayam Cicak <br/>
+Ayam Sapi Cicak <br/>
+Ayam Cicak <br/>
 
 ## Unguided 
 
