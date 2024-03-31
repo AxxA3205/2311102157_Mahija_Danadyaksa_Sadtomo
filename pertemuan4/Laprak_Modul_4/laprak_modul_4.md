@@ -365,7 +365,7 @@ bool isEmpty()
         return 0;
     }
 ```
-Program di atas adalah program single linked list non-circular yang menggunakan bahasa C++. Pertama kita deklarasikan struct Node yang berisi data dan pointer next. Kemudian kita inisialisasi head dan tail dengan NULL. Kemudian kita membuat fungsi-fungsi untuk menambahkan data di depan, belakang, dan tengah. Kemudian kita membuat fungsi untuk menghitung jumlah list, menghapus data di depan, belakang, dan tengah, mengubah data di depan, belakang, dan tengah, menghapus semua data, dan menampilkan data. Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah sebagai berikut:
+Program di atas adalah program single linked list non-circular yang menggunakan bahasa C++. Pertama kita deklarasikan struct Node yang berisi data dan pointer next. Kemudian kita inisialisasi head dan tail dengan NULL. Kemudian kita membuat fungsi-fungsi untuk menambahkan data di depan, belakang, dan tengah. Kemudian kita membuat fungsi untuk menghitung jumlah list, menghapus data di depan, belakang, dan tengah, mengubah data di depan, belakang, dan tengah, menghapus semua data, dan menampilkan data. Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah sebagai berikut: <br/>
 3 <br/>
 3 5 <br/>
 2 3 5 <br/>
@@ -1132,7 +1132,7 @@ int main()
 }
 ```
 #### Output:
-1. Insert Data awal
+##### 1. Insert Data awal
 ![Screenshot Output insert data Unguided 1 pic 1](Image/Unguided1_insertDataFirst_pic%20(1).png)
 ![Screenshot Output insert data Unguided 1 pic 2](Image/Unguided1_insertDataFirst_pic%20(2).png)
 ![Screenshot Output insert data Unguided 1 pic 3](Image/Unguided1_insertDataFirst_pic%20(3).png)
@@ -1141,7 +1141,7 @@ int main()
 ![Screenshot Output insert data Unguided 1 pic 6](Image/Unguided1_insertDataFirst_pic%20(6).png)
 ![Screenshot Output insert data Unguided 1 pic 7](Image/Unguided1_insertDataFirst_pic%20(7).png)
 
-2. Modifikasi Data
+##### 2. Modifikasi Data
 ![Screenshot Output Unguided 1 pic 1](Image/Unguided1_pic%20(1).png)
 ![Screenshot Output Unguided 1 pic 2](Image/Unguided1_pic%20(2).png)
 ![Screenshot Output Unguided 1 pic 3](Image/Unguided1_pic%20(3).png)
