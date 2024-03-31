@@ -378,27 +378,3 @@ int main() {
     }
     return 0;
 }
-//Program di atas merupakan program yang mengimplementasikan linked list dengan menggunakan struct Node yang berisi string nama23 dan int umur23 dan Node *next. Program ini memiliki beberapa fungsi yaitu:
-// 1. insertDepan(string nama, int umur) : untuk menambahkan data di depan
-// 2. insertBelakang(string nama, int umur) : untuk menambahkan data di belakang
-// 3. hitungList() : untuk menghitung jumlah list
-// 4. insertTengah(string nama, int umur, int posisi) : untuk menambahkan data di tengah
-// 5. hapusDepan() : untuk menghapus data di depan
-// 6. hapusBelakang() : untuk menghapus data di belakang
-// 7. hapusTengah(int posisi) : untuk menghapus data di tengah
-// 8. ubahTengah(string nama, int umur, int posisi) : untuk mengubah data di tengah
-// 9. clearList() : untuk menghapus semua data
-// 10. tampil() : untuk menampilkan data
-// 11. main() : Fungsi utama yang digunakan untuk menjalankan program
-// di dalam main program terdapat perulangan while yang digunakan untuk menampilkan menu pilihan yang dapat dipilih oleh user. Pilihan yang dapat dipilih oleh user adalah:
-// 1. Tambah Depan
-// 2. Tambah Belakang
-// 3. Tambah Tengah
-// 4. Hapus Depan
-// 5. Hapus Belakang
-// 6. Hapus Tengah
-// 7. Ubah Tengah
-// 8. Hapus Semua
-// 9. Tampilkan Data
-// 10. Exit
-// User dapat memilih pilihan yang diinginkan dengan memasukkan angka yang sesuai dengan pilihan yang diinginkan. Setelah user memilih pilihan, program akan menjalankan fungsi yang sesuai dengan pilihan yang dipilih oleh user.
