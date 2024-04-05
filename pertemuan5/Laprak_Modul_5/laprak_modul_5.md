@@ -322,15 +322,14 @@ int main()
     return 0;
 }
 ```
-Program di atas adalah program list data dengan menggunakan single linked list circular yang di dalamnya menggunakan struct Node yang berisi string data dan pointer next. Pertama kita deklarasikan struct Node yang berisi string data dan pointer next. Lalu kita deklarasikan variabel head, tail, baru, bantu, dan hapus yang bertipe pointer Node. Lalu kita membuat fungsi menambahkan data di depan, belakang, dan tengah; menghapus data di depan, belakang, dan tengah; menghitung jumlah data; menampilkan data; dan menghapus semua data. Kemudian kita panggil fungsi-fungsi tersebut di dalam fungsi main. Tampilan output program di atas adalah: <br/>
-Ayam <br/>
-Bebek Ayam <br/>
-Bebek Ayam Cicak <br/>
-Bebek Ayam Cicak Domba <br/>
-Bebek Ayam Cicak <br/>
-Ayam Cicak <br/>
-Ayam Sapi Cicak <br/>
-Ayam Cicak <br/>
+Program di atas adalah program yang mengimplementasikan hash table dengan node yang berisi nama dan nomor telepon Program di atas memiliki 3 fungsi utama yaitu insert, remove, dan searchByName. Pertama membuat ukuran tabel hash dengan TABLE_SIZE = 11. Kemudian membuat struktur data HashNode yang berisi nama dan nomor telepon. Lalu membuat class HashMap yang berisi vector dari HashNode* table[TABLE_SIZE]. Selanjutnya membuat fungsi hashFunc yang berfungsi untuk menghitung nilai hash dari nama. Kemudian membuat fungsi insert, remove, searchByName, dan print. Di dalam fungsi main, membuat objek employee_map dari class HashMap untuk menyimpan data nama dan nomor telepon. Kemudian memasukkan data ke dalam hash table menggunakan fungsi insert yaitu data "Mistah", "Pastah", dan "Ghana". Kemudian mencari nomor telepon berdasarkan nama menggunakan fungsi searchByName. Kemudian menghapus data menggunakan fungsi remove. Terakhir mencetak hash table menggunakan fungsi print. <br/>
+Hasi dari program di atas adalah sebagai berikut:<br/>
+Nomer Hp Mistah : 1234 <br/>
+Phone Hp Pastah : 5678 <br/>
+Nomer Hp Mistah setelah dihapus : <br/>
+Hash Table : <br/>
+0: 1: 2: 3: 4: 5: 6: 7: 8: 9: [Ghana, 91011]10: [Pastah, 5678] <br/>
+Dari hasil di atas, dapat dilihat bahwa program berhasil memasukkan data ke dalam hash table, mencari data berdasarkan nama, menghapus data, dan mencetak hash table.
 
 ## Unguided 
 
@@ -631,6 +630,6 @@ user dapat memilih menu yang tersedia dan melakukan operasi sesuai dengan piliha
 
 
 ## Referensi
-[1] Sihombing, Johnson & Ganesha, Politeknik & Gatot, Jl & No, Soebroto & Bandung,. (2020). PENERAPAN STACK DAN QUEUE PADA ARRAY DAN LINKED LIST DALAM JAVA. <br/>
-[2] Abu Sara, M. R., Klaib, M. F. J., & Hasan, M. (2021). Hybrid Array List: An Efficient Dynamic Array with Linked List Structure. Indonesia Journal on Computing (Indo-JC), 5(3), 47-62. <br/>
-[3] Anita Sindar, R. M. S. (2019). Struktur Data Dan Algoritma Dengan C++ (Vol. 1). CV. AA. RIZKY.<br/>
+[1] Shamseen, A., Zanjireh, M. M., Bahaghighat, M., & Xin, Q. (2021). Developing a parallel classifier for mining in big data sets. IIUM Engineering Journal, 22(2), 119-134.
+<!-- [2] Abu Sara, M. R., Klaib, M. F. J., & Hasan, M. (2021). Hybrid Array List: An Efficient Dynamic Array with Linked List Structure. Indonesia Journal on Computing (Indo-JC), 5(3), 47-62. <br/>
+[3] Anita Sindar, R. M. S. (2019). Struktur Data Dan Algoritma Dengan C++ (Vol. 1). CV. AA. RIZKY.<br/> -->

@@ -118,3 +118,23 @@ int main()
 
     return 0;
 }
+
+Program di atas adalah program yang mengimplementasikan hash table dengan node yang berisi nama dan nomor telepon.
+Program di atas memiliki 3 fungsi utama yaitu insert, remove, dan searchByName.
+Pertama membuat ukuran tabel hash dengan TABLE_SIZE = 11. 
+Kemudian membuat struktur data HashNode yang berisi nama dan nomor telepon. 
+Lalu membuat class HashMap yang berisi vector dari HashNode* table[TABLE_SIZE].
+Selanjutnya membuat fungsi hashFunc yang berfungsi untuk menghitung nilai hash dari nama.
+Kemudian membuat fungsi insert, remove, searchByName, dan print.
+Di dalam fungsi main, membuat objek employee_map dari class HashMap untuk menyimpan data nama dan nomor telepon. 
+Kemudian memasukkan data ke dalam hash table menggunakan fungsi insert yaitu data "Mistah", "Pastah", dan "Ghana".
+Kemudian mencari nomor telepon berdasarkan nama menggunakan fungsi searchByName.
+Kemudian menghapus data menggunakan fungsi remove.
+Terakhir mencetak hash table menggunakan fungsi print.
+Hasi dari program di atas adalah sebagai berikut:
+Nomer Hp Mistah : 1234
+Phone Hp Pastah : 5678
+Nomer Hp Mistah setelah dihapus :
+Hash Table :
+0: 1: 2: 3: 4: 5: 6: 7: 8: 9: [Ghana, 91011]10: [Pastah, 5678]
+Dari hasil di atas, dapat dilihat bahwa program berhasil memasukkan data ke dalam hash table, mencari data berdasarkan nama, menghapus data, dan mencetak hash table.
