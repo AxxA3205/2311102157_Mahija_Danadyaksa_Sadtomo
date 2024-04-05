@@ -602,10 +602,10 @@ int main()
 #### Output:
 ##### 1. Insert Data awal
 ![Screenshot Output Unguided 1 pic 1](Image/unguided1_pic%20(1).png)
-![Screenshot Output Unguided 1 pic 2](Image/Unguided1_pic%20(2).png)
-![Screenshot Output Unguided 1 pic 3](Image/Unguided1_pic%20(3).png)
-![Screenshot Output Unguided 1 pic 4](Image/Unguided1_pic%20(4).png)
-![Screenshot Output Unguided 1 pic 5](Image/Unguided1_pic%20(5).png)
+![Screenshot Output Unguided 1 pic 1](Image/unguided1_pic%20(2).png)
+![Screenshot Output Unguided 1 pic 1](Image/unguided1_pic%20(3).png)
+![Screenshot Output Unguided 1 pic 1](Image/unguided1_pic%20(4).png)
+![Screenshot Output Unguided 1 pic 1](Image/unguided1_pic%20(5).png)
 
 Program di atas adalah program list data mahasiswa dengan menggunakan hash table untuk menyimpan data mahasiswa. Hash table pada program ini memiliki ukuran 100 yang artinya bisa menampung 100 data Mahasiswa. Program ini menggunakan struktur data mahasiswa yang terdiri dari nama, NIM, dan nilai. Program ini memiliki beberapa fitur, yaitu:
 
