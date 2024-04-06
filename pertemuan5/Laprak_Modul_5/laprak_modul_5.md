@@ -2,39 +2,73 @@
 <p align="center">Mahija Danadyaksa Sadtomo_2311102157</p>
 
 ## Dasar Teori
-<p>Linked list adalah struktur data yang berisi kumpulan elemen data dimana (node) tiap elemen saling berkaitan atau dihubungkan dengan elemen lain melalui suatu pointer. Pointer adalah alamat elemen data yang tersimpan di mermori.</p> 
-<p>Ada dua jenis pointer yaitu head dan tail. Head adalah simpul pertama yang digunakan sebagai awal akses ke seluruh data dalam linked list. Tail adalah simpul terakhir yang digunakan sebagai penanda akhir urutan simpul. Apabila linked list berisi elemen kosong, maka pointer dari head akan menunjuk ke NULL, begitu juga untuk pointer berikutnya dari tail.</p> 
-<p> Berbeda dengan array, linked list memiliki ukuran elemen yang dapat berubah secara dinamis dan mudah dalam menyisipkan dan menghapus elemen. Selain itu, pada linked list penyimpanan memorinya tidak harus berurutan dan berdekatan. </p> 
+### Hashing
+<p>Hashing diambil dari kata hash. Hash adalah kode yang digunakan untuk membuat pesan kata, maupun data. Sementara itu, hashing adalah sebuah proses yang bertujuan untuk mengubah data dengan ukuran besar (Big Data) ke dalam nilai yang lebih kecil serta unik. Hashing merupakan metode untuk menyimpan sebuah data dalam sebuah array agar penyimpanan data, pencarian data, penambahan data, dan penghapusan data dapat dilakukan dengan cepat.
+</p> <br/>
 
-Tedapat beberapa jenis linked list, yaitu:
-1. Single linked list
-2. Double linked list
-3. Single Circular linked list
-4. Double Circular linked list
+### Hash Table
+![Hash Table](Image/hashTable_pic.png)
+<p>Hash Table adalah struktur data yang digunakan untuk menyimpan dan mengelola kumpulan data, di mana setiap elemen dalam kumpulan data memiliki kunci (key) yang unik dan nilainya (value) terkait. Konsep utama di balik Hash Table adalah penggunaan fungsi Hash untuk mengonversi kunci menjadi alamat atau indeks di dalam tabel, sehingga memungkinkan pencarian dan pengambilan data dengan efisien.
+</p> <br/>
 
-### Single Linked List Non Circular
-Single linked list Non Circular adalah jenis linked list yang hanya memiliki 1 pointer saja. Pointer digunakan untuk menunjuk node selanjutnya (next), kecuali pada node tail atau node terakhir yang pointernya menunjuk ke NULL.
-![Single Linked List](Image/singleLinkedList.png)
+<p>Sistem hash table bekerja dengan cara mengambil input kunci dan
+memetakkannya ke nilai indeks array menggunakan fungsi hash. Kemudian, data
+disimpan pada posisi indeks array yang dihasilkan oleh fungsi hash. Ketika data
+perlu dicari, input kunci dijadikan sebagai parameter untuk fungsi hash, dan
+posisi indeks array yang dihasilkan digunakan untuk mencari data. Dalam kasus
+hash collision, di mana dua atau lebih data memiliki nilai hash yang sama, hash
+table menyimpan data tersebut dalam slot yang sama dengan Teknik yang disebut
+chaining. Fungsi utama dari Hash Table adalah untuk menyediakan struktur data yang memungkinkan pencarian, penyisipan, dan penghapusan data dengan efisien.
+</p><br/>
 
-### Double Linked List Non Circular
-Double Linked List Non Circular adalah jenis linked list yang memiliki 2 pointer. 1 pointer menunjuk ke node selanjutnya (next) dan 1 lagi menunjuk ke node sebelumnya (prev). Pada node head, pointer prev akan bernilai NULL karena node Head adalah node pertama. Pada node Tail, pointer next akan menunjuk ke NULL.
-![Double Linked List](Image/doubleLinkedList.png)
+<p>
+Kelebihan penggunaan Hash Table yaitu dapat mengakses data dengan cepat, kapasitas tidak terbatas, dan relatif mudah digunakan. Sedangkan, kekurangannya yaitu jika memiliki nilai kunci yang sama (kolisi) maka waktu pencarian dapat menjadi 0(n), boros ruang, tidak dapat langsung mengakses data dengan indeks sebelumnya karena Hash Table tidak mendukung reverse traversal.
+</p> <br/>
 
-### Single Circluar Linked List
-Single : artinya field pointer-nya hanya satu buah saja dan satu arah.<br/>
-Circular : artinya pointer next-nya akan menunjuk pada dirinya sendiri
-sehingga berputar. <br/>
-Jadi, Single Circular Linked List adalah linked list yang pointer next-nya menunjuk ke dirinya sendiri, jadi node tail (node terakhir) akan menunjuk ke node head (node pertama).
+<p>
+Dalam praktiknya, ada dua teknik yang umum digunakan untuk mengatasi kolisi pada saat menggunakan hash table:
 
-![Circular Linked List](Image/circularLinkedList.png)
+1. Open Hashing (Chaining)
+Metode chaining mengatasi collision dengan menyimpan semua item data yang memiliki nilai indeks yang sama dalam sebuah linked list. Ketika terjadi pencarian atau penambahan data, operasi dilakukan pada linked list yang sesuai dengan indeks yang dihasilkan dari fungsi hash. Meskipun pencarian atau penambahan bisa lambat ketika linked list memiliki banyak node, chaining efektif mengatasi jumlah besar data dengan menghindari keterbatasan array.
 
-### Double Circular Linked List
-Double: artinya field pointer-nya terdiri dari dua buah dan dua arah, yaitu prev dan next <br/>
-Circular : artinya pointer next-nya akan menunjuk pada dirinya sendiri
-sehingga berputar. <br/>
-Jadi, Double Circular Linked List adalah linked list yang pointer next dan pointer prev-nya menunjuk ke dirinya sendiri secara circular.
+2. Closed Hashing
+- Linear Probing: Pada collision, pencarian dilakukan ke posisi berikutnya dalam tabel hash hingga menemukan posisi yang kosong. Jika tidak ada yang kosong, tabel dianggap penuh.
+- Quadratic Probing: Mirip dengan linear probing, tetapi langkahnya bukan satu-satu, melainkan dengan penambahan kuadrat (1^2, 2^2, 3^2, dst.).
+- Double Hashing: Pada collision, digunakan fungsi hash kedua untuk menentukan posisi alternatif. 
+</p> <br/>
 
-![Double Circular Linked List](Image/doubleCircularLinkedList.png)
+<P>
+Macam-macam operasi pada Hash Table:
+
+1. Pencarian (Search): Digunakan untuk mencari elemen/data dalam Hash Table berdasarkan kunci atau indeksnya. Pencarian dilakukan dengan menggunakan fungsi hash untuk menghasilkan indeks elemen yang dicari.
+2. Penyisipan (Insertion): Operasi ini digunakan untuk menyisipkan elemen/data baru ke dalam Hash Table. Elemen baru akan ditempatkan pada indeks yang dihasilkan oleh fungsi hash.
+3. Penghapusan (Deletion): Digunakan untuk menghapus elemen/data dari Hash Table berdasarkan kunci atau indeksnya. Elemen yang dihapus akan dihapus dari indeks yang dihasilkan oleh fungsi hash.
+4. Update: Operasi ini digunakan untuk mengubah nilai elemen/data yang sudah ada dalam Hash Table. Nilai elemen dapat diubah berdasarkan kunci atau indeksnya.
+5. Collision Handling: Collision terjadi ketika dua atau lebih elemen memiliki indeks yang sama setelah melalui fungsi hash. Operasi ini digunakan untuk menangani collision dan memastikan bahwa elemen-elemen dengan indeks yang sama dapat disimpan dan diakses dengan benar.
+6. Resize: Operasi ini digunakan untuk mengubah ukuran Hash Table jika jumlah elemen/data yang disimpan melebihi kapasitas yang ditentukan. Resize dilakukan untuk menjaga efisiensi dan kinerja Hash Table.
+7. Iterasi: Operasi yang digunakan untuk mengakses dan memproses semua elemen/data yang ada dalam Hash Table secara berurutan.
+</p> <br/>
+
+<p>Langkah-langkah membuat Hash Table:
+
+1. Tentukan Ukuran Tabel<br/>
+Pertama, tentukan ukuran tabel hash yang sesuai untuk kebutuhan Anda. Ukuran tabel haruslah bilangan prima agar membantu mengurangi jumlah tabrakan hash dan mendistribusikan data dengan lebih merata.
+
+2. Buat Struktur Data<br/>
+Buat struktur data untuk menyimpan pasangan kunci-nilai (key-value) dalam tabel hash. Dalam beberapa bahasa pemrograman, Anda dapat menggunakan array, linked list, atau struktur data lainnya untuk mewakili tabel hash.
+
+3. Definisikan Fungsi Hash<br/>
+Buatlah fungsi hash yang akan mengubah kunci (key) menjadi indeks dalam tabel hash. Fungsi hash harus menghasilkan nilai yang unik dan merata untuk setiap kunci untuk mencegah terjadinya tabrakan hash sebisa mungkin.
+
+4. Penanganan Tabrakan<br/>
+Tentukan dan terapkan metode penanganan tabrakan hash. Jika dua kunci berbeda menghasilkan indeks yang sama, Anda perlu memutuskan cara untuk menangani tabrakan tersebut. Metode umum untuk menangani tabrakan adalah dengan teknik chaining, yaitu menyimpan beberapa nilai dalam satu slot tabel hash menggunakan struktur data seperti linked list atau array.
+
+5. Operasi Pencarian, Penyisipan, dan Penghapusan<br/>
+Implementasikan fungsi-fungsi untuk melakukan operasi pencarian (search), penyisipan (insertion), dan penghapusan (deletion) data dalam tabel hash. Pastikan operasi ini bekerja dengan benar dan efisien, memanfaatkan fungsi hash dan metode penanganan tabrakan yang telah ditentukan sebelumnya.
+
+6. Uji Coba dan Optimalisasi<br/>
+Setelah selesai membuat Hash Table, lakukan uji coba untuk memastikan bahwa implementasi berfungsi dengan baik dan memberikan hasil yang diharapkan. Jika diperlukan, lakukan optimasi untuk meningkatkan kinerja Hash Table, termasuk pemilihan ukuran tabel yang lebih optimal atau perbaikan pada fungsi hash.
+</p> <br/>
 
 ## Guided 
 
@@ -628,8 +662,13 @@ user dapat memilih menu yang tersedia dan melakukan operasi sesuai dengan piliha
 
 ## Kesimpulan
 
+Hashing adalah proses untuk mengubah data dengan ukuran besar menjadi nilai yang lebih kecil dan unik. Hash Table merupakan struktur data yang menyimpan dan mengelola kumpulan data dengan menggunakan kunci (key) unik untuk setiap elemen dan nilai (value) terkait. Konsep utama Hash Table adalah menggunakan fungsi hash untuk mengonversi kunci menjadi indeks di dalam tabel, memungkinkan pencarian dan pengambilan data secara efisien. Ada dua teknik umum untuk mengatasi kolisi pada Hash Table: Open Hashing (Chaining) dan Closed Hashing (termasuk Linear Probing, Quadratic Probing, dan Double Hashing).<br/>
+
+Operasi pada Hash Table meliputi pencarian, penyisipan, penghapusan, update, penanganan collision, resize, dan iterasi. Langkah-langkah dalam membuat Hash Table melibatkan penentuan ukuran tabel, pembuatan struktur data, definisi fungsi hash, penanganan collision, implementasi operasi pencarian, penyisipan, dan penghapusan, serta uji coba dan optimalisasi.<br/>
+
+Kelebihan penggunaan Hash Table termasuk akses data yang cepat, kapasitas tidak terbatas, dan kemudahan penggunaan, sementara kekurangannya meliputi waktu pencarian yang menjadi 0(n) jika nilai kunci sama (kolisi) yang dapat di atasi dengan beberapa teknik yang sudah dibahas di atas, penggunaan ruang yang boros, dan tidak mendukung reverse traversal.<br/>
 
 ## Referensi
 [1] Shamseen, A., Zanjireh, M. M., Bahaghighat, M., & Xin, Q. (2021). Developing a parallel classifier for mining in big data sets. IIUM Engineering Journal, 22(2), 119-134.
-<!-- [2] Abu Sara, M. R., Klaib, M. F. J., & Hasan, M. (2021). Hybrid Array List: An Efficient Dynamic Array with Linked List Structure. Indonesia Journal on Computing (Indo-JC), 5(3), 47-62. <br/>
-[3] Anita Sindar, R. M. S. (2019). Struktur Data Dan Algoritma Dengan C++ (Vol. 1). CV. AA. RIZKY.<br/> -->
+[2] Rahardja, U., Hidayanto, A. N., Lutfiani, N., Febiani, D. A., & Aini, Q. (2021). Immutability of Distributed Hash Model on Blockchain Node Storage. Sci. J. Informatics, 8(1), 137-143.<br/>
+[3] Mailund, T. (2019). The joys of hashing: hash table programming with C. Apress.<br/>
