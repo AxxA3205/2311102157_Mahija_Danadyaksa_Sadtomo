@@ -1,4 +1,4 @@
-# <h1 align="center">Laporan Praktikum Modul 4 - Single Linked List Circular dan Non Circular </h1>
+# <h1 align="center">Laporan Praktikum Modul 5 - Hash Table </h1>
 <p align="center">Mahija Danadyaksa Sadtomo_2311102157</p>
 
 ## Dasar Teori
@@ -670,6 +670,6 @@ Operasi pada Hash Table meliputi pencarian, penyisipan, penghapusan, update, pen
 Kelebihan penggunaan Hash Table termasuk akses data yang cepat, kapasitas tidak terbatas, dan kemudahan penggunaan, sementara kekurangannya meliputi waktu pencarian yang menjadi 0(n) jika nilai kunci sama (kolisi) yang dapat di atasi dengan beberapa teknik yang sudah dibahas di atas, penggunaan ruang yang boros, dan tidak mendukung reverse traversal.<br/>
 
 ## Referensi
-[1] Shamseen, A., Zanjireh, M. M., Bahaghighat, M., & Xin, Q. (2021). Developing a parallel classifier for mining in big data sets. IIUM Engineering Journal, 22(2), 119-134.
+[1] Shamseen, A., Zanjireh, M. M., Bahaghighat, M., & Xin, Q. (2021). Developing a parallel classifier for mining in big data sets. IIUM Engineering Journal, 22(2), 119-134.<br/>
 [2] Rahardja, U., Hidayanto, A. N., Lutfiani, N., Febiani, D. A., & Aini, Q. (2021). Immutability of Distributed Hash Model on Blockchain Node Storage. Sci. J. Informatics, 8(1), 137-143.<br/>
 [3] Mailund, T. (2019). The joys of hashing: hash table programming with C. Apress.<br/>
