@@ -22,20 +22,20 @@ Operasi-operasi Dasar pada Queue, yaitu:
 Secara umum ada 4 jenis struktur data queue, yaitu:
 
 #### Berdasarkan Implementasinya:
-1. Simple Queue
+1. Simple Queue <br/>
 Simple queue adalah struktur data queue paling dasar di mana penyisipan item dilakukan di simpul belakang (rear atau tail) dan penghapusan terjadi di simpul depan (front atau head). <br/>
 ![Screenshot Jenis Queue](Image/2022_06_image-87.jpg)<br/>
 
-2. Circular Queue
+2. Circular Queue <br/>
 Pada circular queue, simpul terakhir terhubung ke simpul pertama. Queue jenis ini juga dikenal sebagai Ring Buffer karena semua ujungnya terhubung ke ujung yang lain. Penyisipan terjadi di akhir antrian dan penghapusan di depan antrian. <br/>
 ![Screenshot Jenis Queue](Image/2022_06_image-86.jpg)<br/>
 
 #### Berdasarkan Penggunaan:
-3. Priority Queue
+3. Priority Queue <br/>
 Priority Queue adalah strruktur data queue dimana simpul akan memiliki beberapa prioritas yang telah ditentukan. Simpul dengan prioritas terbesar akan menjadi yang pertama dihapus dari antrian. Sedangkan penyisipan item terjadi sesuai urutan kedatangannya. <br/>
 ![Screenshot Jenis Queue](Image/2022_06_image-84.jpg)<br/>
 
-4. Double-Ended Queue (Dequeue)
+4. Double-Ended Queue (Dequeue) <br/>
 Dalam double-ended queue (dequeue), operasi penyisipan dan penghapusan dapat terjadi di ujung depan dan belakang dari queue. <br/>
 ![Screenshot Jenis Queue](Image/Screenshot%202024-05-13%20174457.png)<br/>
 
@@ -50,7 +50,7 @@ Fungsi queue yang paling umum dalam struktur data, yaitu:
 
 ## Guided 
 
-### 1. Stack
+### 1. Queue
 
 ```C++
 #include <iostream>
@@ -151,7 +151,7 @@ program di atas adalah program antrian dengan menggunakan struktur data queue. P
 4. dequeueAntrian(), digunakan untuk mengurangi antrian.
 5. countQueue(), digunakan untuk menghitung banyak antrian.
 6. clearQueue(), digunakan untuk menghapus semua antrian.
-7. viewQueue(), digunakan untuk melihat antrian.
+7. viewQueue(), digunakan untuk melihat antrian. <br/>
 
 Pada fungsi main, terdapat contoh penggunaan fungsi-fungsi tersebut. Pertama, menambahkan antrian dengan nama Andi dan Maya. Kemudian, menampilkan antrian dan jumlah antrian. Selanjutnya, mengurangi antrian dan menampilkan antrian serta jumlah antrian.Terakhir, menghapus semua antrian dan menampilkan antrian serta jumlah antrian.
 
@@ -278,7 +278,8 @@ Program di atas adalah program queue dengan menggunakan linked list. Program ini
 2. dequeueAntrian: Menghapus data dari antrian
 3. count: Menghitung jumlah data dalam antrian
 4. clear: Menghapus semua data dalam antrian
-5. view: Menampilkan data dalam antrian
+5. view: Menampilkan data dalam antrian <br/>
+
 pertama, kita membuat struct Node yang berisi data dan pointer next. Kemudian, kita membuat class Queue yang memiliki atribut front dan back yang bertipe Node pointer. Di dalam class Queue, kita membuat fungsi-fungsi enqueueAntrian, dequeueAntrian, count, clear, dan view. Di dalam fungsi main, kita membuat objek queue dari class Queue dan melakukan operasi-operasi enqueue, dequeue, count, clear, dan view, seperti yang ada di dalam program yaitu menambahkan data "Andi" dan "Maya" dengan enqueueAntrian(), menghapus data "Andi" dan "Maya" dengan dequeueAntrian(), menghitung jumlah data dalam antrian dengan count(), dan menampilkan data dalam antrian dengan view().
 
 ### 2. Dari nomor 1 buatlah konsep antri dengan atribut Nama mahasiswa dan NIM Mahasiswa
@@ -468,11 +469,12 @@ Program di atas adalah program queue dengan menggunakan linked list. Program ini
 2. Hapus antrian, deqeueueAntrian(): Menghapus data mahasiswa dari antrian
 3. Lihat antrian, view(): Menampilkan data mahasiswa yang ada dalam antrian
 4. Hapus semua antrian, clear(): Menghapus semua data mahasiswa dalam antrian
-5. Keluar: Keluar dari program
+5. Keluar: Keluar dari program <br/>
+
 Pada main menu, user dapat memilih fitur yang ingin digunakan dengan memasukkan nomor pilihan. Program akan menampilkan pesan kesalahan jika user memasukkan nomor pilihan yang tidak valid. Program akan terus berjalan hingga user memilih untuk keluar dari program. Pertama, programmer menambahkan 3 data nama dan nim. Setelah itu, programmer menghapus data pertama. Kemudian, menghapus semua antrian dan mengecek jumlah antrian yang sudah kosong.
 
 ## Kesimpulan
-Queue hampir sama seprti linked list tetapi pada queue menggunakan struktur data FIFO (First In First Out) di mana elemen data yang pertama dimasukkan ke dalam antrean akan menjadi yang pertama pula untuk dikeluarkan. Struktur data ini memiliki konsep seperti antrean pada supermarket. 
+Queue hampir sama seprti linked list tetapi pada queue menggunakan struktur data FIFO (First In First Out) di mana elemen data yang pertama dimasukkan ke dalam antrean akan menjadi yang pertama pula untuk dikeluarkan. Struktur data ini memiliki konsep seperti antrean pada supermarket. <br/>
 Terdapat beberapa operasi di queue yaitu enqueue(), dequeue(), peek(), isEmpty(), isFull(), dan size(). Jenis-jenis queue yaitu Simple queue, Circular queue, Priority queue, Double-Ended queue. Queue memiliki fungsi utama yaitu untuk mengatur dan mengelola antrean tugas atau operasi secara efisien. Dalam sistem komputasi, ia digunakan untuk menangani tugas-tugas seperti penjadwalan proses, antrean pesan, dan manajemen sumber daya. 
 
 ## Referensi
