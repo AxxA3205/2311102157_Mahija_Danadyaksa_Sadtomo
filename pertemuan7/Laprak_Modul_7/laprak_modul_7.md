@@ -7,7 +7,7 @@ Queue merupakan struktur data FIFO (First In First Out) yang tersusun dari kumpu
 
 ### Cara Kerja
 Cara kerja queue yaitu seperti antrean pada supermarket, di mana orang pertama yang menuju kasir adalah yang pertama dilayani. Pada queue, urutan pertama disebut front atau head dan urutan terakhir dosebut Back, Rear, atau Tail. Proses penambahan data pada queue disebut Enqueue dan proses penghapusan pada queue disebut dequeue.<br/>
-[Screenshot Cara Kerja Queue](Image/Asset-1-4-1536x864.png)<br/>
+![Screenshot Cara Kerja Queue](Image/Asset-1-4-1536x864.png)<br/>
 
 ### Operasi Pada Queue
 Operasi-operasi Dasar pada Queue, yaitu:
@@ -24,20 +24,20 @@ Secara umum ada 4 jenis struktur data queue, yaitu:
 #### Berdasarkan Implementasinya:
 1. Simple Queue
 Simple queue adalah struktur data queue paling dasar di mana penyisipan item dilakukan di simpul belakang (rear atau tail) dan penghapusan terjadi di simpul depan (front atau head). <br/>
-[Screenshot Jenis Queue](Image/2022_06_image-87.jpg)<br/>
+![Screenshot Jenis Queue](Image/2022_06_image-87.jpg)<br/>
 
 2. Circular Queue
 Pada circular queue, simpul terakhir terhubung ke simpul pertama. Queue jenis ini juga dikenal sebagai Ring Buffer karena semua ujungnya terhubung ke ujung yang lain. Penyisipan terjadi di akhir antrian dan penghapusan di depan antrian. <br/>
-[Screenshot Jenis Queue](Image/2022_06_image-86.jpg)<br/>
+![Screenshot Jenis Queue](Image/2022_06_image-86.jpg)<br/>
 
 #### Berdasarkan Penggunaan:
 3. Priority Queue
 Priority Queue adalah strruktur data queue dimana simpul akan memiliki beberapa prioritas yang telah ditentukan. Simpul dengan prioritas terbesar akan menjadi yang pertama dihapus dari antrian. Sedangkan penyisipan item terjadi sesuai urutan kedatangannya. <br/>
-[Screenshot Jenis Queue](Image/2022_06_image-84.jpg)<br/>
+![Screenshot Jenis Queue](Image/2022_06_image-84.jpg)<br/>
 
 4. Double-Ended Queue (Dequeue)
 Dalam double-ended queue (dequeue), operasi penyisipan dan penghapusan dapat terjadi di ujung depan dan belakang dari queue. <br/>
-[Screenshot Jenis Queue](Image/Screenshot%202024-05-13%20174457.png)<br/>
+![Screenshot Jenis Queue](Image/Screenshot%202024-05-13%20174457.png)<br/>
 
 ### Fungsi Queue Dan Kegunaan Queue
 Fungsi queue yang paling umum dalam struktur data, yaitu:
@@ -272,7 +272,7 @@ int main()
 }
 ```
 #### Output:
-![Screenshot Output Unguided 1](Image/unguided1_pic.png.png)
+![Screenshot Output Unguided 1](Image/unguided1_pic.png)
 Program di atas adalah program queue dengan menggunakan linked list. Program ini memiliki fungsi-fungsi yang sama dengan program sebelumnya, yaitu:
 1. enqueueAntrian: Menambahkan data ke dalam antrian
 2. dequeueAntrian: Menghapus data dari antrian
