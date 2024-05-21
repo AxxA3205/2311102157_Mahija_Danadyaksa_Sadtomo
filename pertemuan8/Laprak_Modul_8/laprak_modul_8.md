@@ -7,7 +7,7 @@ Searching adalah sebuah metode pencarian guna menemukan data/informasi yang seda
 
 
 ### 1. Sequential Search
-Sequential Search Adalah metode pencarian sebuah data dari suatu kumpulan data dimana data dicari dari depan ke belakang atau dari awal sampai akhir data tanpa harus data tersebut terurut. Konsepnya yaitu dengan melakukan perbandingan data satu-persatu secara berurutan sampai data tersebut ditemukan ataupun tidak di temukan.<br/>
+Sequential Search Adalah metode pencarian sebuah data dari suatu kumpulan data dimana data dicari dari depan ke belakang atau dari awal sampai akhir data tanpa harus data tersebut terurut. Konsepnya yaitu dengan melakukan perbandingan data satu-persatu secara berurutan sampai data tersebut ditemukan ataupun tidak di temukan.
 
 #### Algoritma Sequential Search 
 1. Data melakukan perbandingan satu per satu secara berurutan dalam kumpulan data dengan data yang  dicari sampai data tersebut ditemukan atau tidak ditemukan.  
@@ -18,7 +18,7 @@ Sequential Search Adalah metode pencarian sebuah data dari suatu kumpulan data d
 #### Kelebihan dan Kekurangan Sequential Search
 Kelebihan:
 - Relatif lebih cepat dan efisien untuk data yang memiliki jumlah terbatas .
-- Algoritma perogrammannya lebih sederhana 
+- Algoritma perogrammannya lebih sederhana <br/>
 
 Kekurangan:
 - Kurang cepat untuk melakukan pencarian data dalam jumlah yang besar 
@@ -41,7 +41,7 @@ Binary Search Adalah metode pencarian sebuah data dari suatu kumpulan data, dima
 #### Kelebihan dan Kekurangan Binary Search
 Kelebihan:
 - Untuk Pencarian data dalam jumlah yang besar, waktu searching/pencarian lebih cepat karena data telah terurut 
-- Beban komputasinya cenderung lebih kecil
+- Beban komputasinya cenderung lebih kecil <br/>
 
 Kekurangan:
 - Data harus sudah di-sorting lebih dulu ( dalam keadaan terurut ) agar lebih mudah dalam pencarian data yang diinginkan. 
@@ -90,7 +90,9 @@ int main()
     return 0;
 }
 ```
-program di atas adalah program pencarian data dengan metode sequential search. Pada program di atas terdapat array data yang berisi 10 data, kemudian program akan mencari data yang dicari pada array data tersebut. Jika data yang dicari ditemukan, maka program akan menampilkan pesan "Angka ditemukan pada indeks ke-". Jika data tidak ditemukan, maka program akan menampilkan pesan "data tidak ditemukan".  Pada program di atas, data yang dicari adalah 10. Output dari program di atas adalah "Angka 10 ditemukan pada indeks ke-9" karena data 10 ditemukan pada indeks ke-9. Jika data yang dicari adalah 11 maka output dari program di atas adalah "data tidak ditemukan" karena data 11 tidak ada pada array data.
+program di atas adalah program pencarian data dengan metode sequential search. Pada program di atas terdapat array data yang berisi 10 data, kemudian program akan mencari data yang dicari pada array data tersebut. Jika data yang dicari ditemukan, maka program akan menampilkan pesan "Angka ditemukan pada indeks ke-". Jika data tidak ditemukan, maka program akan menampilkan pesan "data tidak ditemukan". <br/>
+
+Pada program di atas, data yang dicari adalah 10. Output dari program di atas adalah "Angka 10 ditemukan pada indeks ke-9" karena data 10 ditemukan pada indeks ke-9. Jika data yang dicari adalah 11 maka output dari program di atas adalah "data tidak ditemukan" karena data 11 tidak ada pada array data. <br/>
 
 ### 2. Binary Search
 ```C++
@@ -163,7 +165,9 @@ int main(){
     return 0;
 }
 ```
-Program di atas adalah program pencarian data dengan metode binary search. Pada program di atas terdapat array data yang berisi 7 data. Pada program di atas, data diurutkan terlebih dahulu menggunakan metode selection sort sebelum dilakukan pencarian data menggunakan metode binary search. Kemudian program akan mencari data yang dicari pada array data tersebut. Jika data yang dicari ditemukan maka program akan menampilkan pesan "Data ditemukan pada index ke-". Jika data tidak ditemukan, maka program akan menampilkan pesan "Data tidak ditemukan". Pada program di atas, data yang dicari adalah 5. Output dari program di atas adalah "Data ditemukan pada index ke-3" karena data 5 ditemukan pada index ke-3. Jika data yang dicari adalah 6 maka output dari program di atas adalah "Data tidak ditemukan" karena data 6 tidak ada pada array data.
+Program di atas adalah program pencarian data dengan metode binary search. Pada program di atas terdapat array data yang berisi 7 data. Pada program di atas, data diurutkan terlebih dahulu menggunakan metode selection sort sebelum dilakukan pencarian data menggunakan metode binary search. Kemudian program akan mencari data yang dicari pada array data tersebut. Jika data yang dicari ditemukan maka program akan menampilkan pesan "Data ditemukan pada index ke-". <br/>
+
+Jika data tidak ditemukan, maka program akan menampilkan pesan "Data tidak ditemukan". Pada program di atas, data yang dicari adalah 5. Output dari program di atas adalah "Data ditemukan pada index ke-3" karena data 5 ditemukan pada index ke-3. Jika data yang dicari adalah 6 maka output dari program di atas adalah "Data tidak ditemukan" karena data 6 tidak ada pada array data. <br/>
 
 ## Unguided 
 
@@ -317,20 +321,25 @@ int main() // fungsi utama
 #### Output:
 ![Screenshot Output Unguided 2](Image/unguided2_pic.png)
 
-Program di atas adalah program yang digunakan untuk menghitung jumlah huruf vokal dalam suatu kata dengan menggunakan sequential search. 
+Program di atas adalah program yang digunakan untuk menghitung jumlah huruf vokal dalam suatu kata dengan menggunakan sequential search. <br/>
+
 terdapat beberapa fungsi pada program tersebut, yaitu:
+
 1. fungsi carivokal(string kata, char huruf) : fungsi ini digunakan untuk mencari jumlah huruf vokal dalam suatu kata.
    - Input : string kata, char huruf 
-   - Output : int jumlah
+   - Output : int jumlah <br/>
+
 2. fungsi hitungvokal(string kata) : fungsi ini digunakan untuk menampilkan jumlah huruf vokal dalam suatu kata.
    - Input : string kata
-   - Output : void
+   - Output : void <br/>
+
 3. fungsi main() : fungsi utama yang digunakan untuk memanggil fungsi hitungvokal(string kata) dan menampilkan hasilnya.
    - Input : void
-   - Output : int
-Pada fungsi carivokal(string kata, char huruf), terdapat variabel jumlah yang digunakan untuk menyimpan jumlah huruf vokal yang ditemukan. Kemudian, dilakukan iterasi melalui setiap karakter dalam string kata. Jika karakter pada indeks saat ini sama dengan huruf yang dicari, maka jumlah akan ditambah.
+   - Output : int <br/>
 
-Pada fungsi hitungvokal(string kata), terdapat variabel jumlah dan array vokal yang berisi huruf vokal. Kemudian, dilakukan iterasi melalui array vokal. Pada setiap iterasi, fungsi carivokal(kata, vokal[i]) akan dipanggil untuk menghitung jumlah huruf vokal vokal[i] dalam kata.
+Pada fungsi carivokal(string kata, char huruf), terdapat variabel jumlah yang digunakan untuk menyimpan jumlah huruf vokal yang ditemukan. Kemudian, dilakukan iterasi melalui setiap karakter dalam string kata. Jika karakter pada indeks saat ini sama dengan huruf yang dicari, maka jumlah akan ditambah. <br/>
+
+Pada fungsi hitungvokal(string kata), terdapat variabel jumlah dan array vokal yang berisi huruf vokal. Kemudian, dilakukan iterasi melalui array vokal. Pada setiap iterasi, fungsi carivokal(kata, vokal[i]) akan dipanggil untuk menghitung jumlah huruf vokal vokal[i] dalam kata. <br/>
 
 Pada fungsi main(), terdapat variabel kata yang digunakan untuk menyimpan kata yang dimasukkan oleh pengguna. Pengguna diminta untuk memasukkan kata, kemudian fungsi hitungvokal(kata) akan dipanggil untuk menghitung dan menampilkan jumlah huruf vokal dalam kata tersebut. Jumlah huruf vokal akan ditampilkan pada layar sesuai dengan huruf vokal yang ada. Jika tidak ada huruf vokal tertentu dalam kata, maka jumlah huruf vokal tersebut akan ditampilkan sebagai 0.
 
@@ -370,19 +379,14 @@ int main() // fungsi utama
 #### Output:
 ![Screenshot Output Unguided 2](Image/unguided3_pic.png)
 
-Program di atas adalah program queue dengan menggunakan linked list. Program ini digunakan untuk mengelola antrian mahasiswa. Program ini memiliki beberapa fitur, yaitu:
-1. Tambah antrian, enqueueAntrian(): Menambahkan data mahasiswa ke dalam antrian
-2. Hapus antrian, deqeueueAntrian(): Menghapus data mahasiswa dari antrian
-3. Lihat antrian, view(): Menampilkan data mahasiswa yang ada dalam antrian
-4. Hapus semua antrian, clear(): Menghapus semua data mahasiswa dalam antrian
-5. Keluar: Keluar dari program <br/>
+<p> Program di atas adalah program yang digunakan untuk mencari jumlah kemunculan suatu angka dalam array. Terdapat fungsi sequential search yang digunakan untuk mencari jumlah kemunculan angka 4 dalam array. int arr[] adalah array yang akan dicari, int n adalah jumlah elemen dalam array, dan int key adalah angka yang dicari. terdapat int count yang digunakan untuk menghitung jumlah kemunculan angka 4 dalam array dan perulangan for untuk mencari angka 4 dalam array.  </p> <br/>
 
-Pada main menu, user dapat memilih fitur yang ingin digunakan dengan memasukkan nomor pilihan. Program akan menampilkan pesan kesalahan jika user memasukkan nomor pilihan yang tidak valid. Program akan terus berjalan hingga user memilih untuk keluar dari program. Pertama, programmer menambahkan 3 data nama dan nim. Setelah itu, programmer menghapus data pertama. Kemudian, menghapus semua antrian dan mengecek jumlah antrian yang sudah kosong.
+<p> Pada fungsi main, terdapat array data yang akan dicari, size untuk menghitung jumlah elemen dalam array, key adalah angka yang dicari, dan result adalah hasil dari fungsi sequentialSearch. Hasil dari program di atas adalah jumlah kemunculan angka 4 dalam array data. Output dari program di atas adalah "Jumlah angka 4: 4" karena angka 4 muncul sebanyak 4 kali dalam array data. </p> <br/>
 
 ## Kesimpulan
-Searching adalah sebuah metode pencarian guna menemukan data/informasi yang sedang dicari di dalam sebuah kumpulan data yang memiliki tipe data sama. Terdapat 2 metode searching yaitu Sequential Search dan Binary Search.
-Sequential Search adalah algoritma pencarian yang bekerja dengan mengecek setiap elemen pada array secara berurutan mulai dari elemen pertama hingga akhir. Algoritma pencarian ini dapat digunakan untuk data yang masih berpola acak. 
-Binary Search adalah algoritma pencarian data yang digunakan untuk mencari suatu nilai pada data yang sudah terurut. Cara kerja dari algoritma ini yaitu membagi jumlah data menjadi 2 bagian secara berulang kali untuk memperkecil lokasi pencarian suatu data hingga pada akhirnya dapat ditemukan. Berbeda dengan Sequential Search yang mencari dengan cara mengecek setiap elemen pada array satu persatu.
+<p> Searching adalah sebuah metode pencarian guna menemukan data/informasi yang sedang dicari di dalam sebuah kumpulan data yang memiliki tipe data sama. Terdapat 2 metode searching yaitu Sequential Search dan Binary Search.<p> <br/>
+<p> Sequential Search adalah algoritma pencarian yang bekerja dengan mengecek setiap elemen pada array secara berurutan mulai dari elemen pertama hingga akhir. Algoritma pencarian ini dapat digunakan untuk data yang masih berpola acak. <p> <br/>
+<p> Binary Search adalah algoritma pencarian data yang digunakan untuk mencari suatu nilai pada data yang sudah terurut. Cara kerja dari algoritma ini yaitu membagi jumlah data menjadi 2 bagian secara berulang kali untuk memperkecil lokasi pencarian suatu data hingga pada akhirnya dapat ditemukan. Berbeda dengan Sequential Search yang mencari dengan cara mengecek setiap elemen pada array satu persatu.<p> <br/>
 
 ## Referensi
 [1] Quinn, R., Advanced C++ Programming Cookbook. United Kingdoms: Packt Publishing Ltd., 2020.<br/>
