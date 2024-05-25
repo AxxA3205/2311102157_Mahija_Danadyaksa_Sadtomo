@@ -45,7 +45,7 @@ Istilah-istilah pada Graph:
 
 2. Representasi graph dalam bentuk linked list
 - Adjacency Linkedlist Graph tak berarah
-![Screenshot Graph tidak Berarah Matrix](Image/Repgraphtidakberarahlinkedlist_pic.pngpng)<br/>
+![Screenshot Graph tidak Berarah Linked List](Image/Repgraphtidakberarahlinkedlist_pic.png)<br/>
 
 ### 2. Tree
 ![Screenshot Graph](Image/Tree_pic.png)<br/>
@@ -82,9 +82,7 @@ Depth of node adalah banyaknya edge dari root ke sebuah node.
 Height of tree dapat diartikan sebagai panjang jalur terpanjang dari simpul akar ke simpul daun dari seuah tree.
 
 9. Degree of node
-Jumlah cabang yang melekat pada simpul disebut Degree of node atau derajat simpul. Derajat simpul pada sebuah leaf node adalah 0. 
-
-Selain Degree of node, terdapat juga Degree of tree yaitu derajat maksimum simpul di antara semua simpul pada tree.
+Jumlah cabang yang melekat pada simpul disebut Degree of node atau derajat simpul. Derajat simpul pada sebuah leaf node adalah 0. Selain Degree of node, terdapat juga Degree of tree yaitu derajat maksimum simpul di antara semua simpul pada tree.
 
 10. Subtree
 Subtree adalah setiap simpul dari tree beserta turunannya.
