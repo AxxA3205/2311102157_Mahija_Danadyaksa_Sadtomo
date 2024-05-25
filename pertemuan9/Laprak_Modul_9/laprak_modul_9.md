@@ -11,15 +11,20 @@ Graph adalah jenis struktur data umum yang susunan datanya tidak berdekatan satu
 
 
 Istilah-istilah pada Graph:
-1. Node, adalah struktur yang berisi sebuah nilai atau suatu kondisi atau menggambarkan sebuah struktur data terpisah atau sebuah bagian pohon itu sendiri.<br/>
+1. Node <br/>
+Node adalah struktur yang berisi sebuah nilai atau suatu kondisi atau menggambarkan sebuah struktur data terpisah atau sebuah bagian pohon itu sendiri.<br/>
 
-2. Vertex, adalah himpunan node / titik pada sebuah graph. <br/>
+2. Vertex <br/> 
+Vertex adalah himpunan node / titik pada sebuah graph. <br/>
 
-3. Edge, adalah penghubung antara satu node dengan node yang lain. Sebuah garis harus diawali dan diakhiri titik. <br/>
+3. Edge <br/> 
+Edge adalah penghubung antara satu node dengan node yang lain. Sebuah garis harus diawali dan diakhiri titik. <br/>
 
-4. Path, adalah jalur dari satu titik ke titik lain. Sebuah path yang diawali dan diakhiri dengan titik yang sama disebut juga dengan simpul tertutup. <br/>
+4. Path <br/> 
+Path adalah jalur dari satu titik ke titik lain. Sebuah path yang diawali dan diakhiri dengan titik yang sama disebut juga dengan simpul tertutup. <br/>
 
-5. Adjacent, adalah dua buah titik dikatakan berdekatan (adjacent) jika dua buah titik tersebut terhubung dengan sebuah sisi. <br/>
+5. Adjacent <br/>
+Adjacent adalah dua buah titik dikatakan berdekatan (adjacent) jika dua buah titik tersebut terhubung dengan sebuah sisi. <br/>
 
 #### B. Jenis Graph
 1. Berdasarkan orientasi arah sisi nya, graph dapat dibedakan menjadi 2 yaitu : <br/>
@@ -37,14 +42,14 @@ Istilah-istilah pada Graph:
 
 #### C. Representasi Graph
 1. Representasi graph dalam bentuk matrix
-- Adjacency Matrix Graph berarah
+- Adjacency Matrix Graph berarah <br/>
 ![Screenshot Graph Berarah matrix](Image/Repgraphberarahmatrix_pic.png)<br/>
 
-- Adjacency Matrix Graph tak berarah
+- Adjacency Matrix Graph tak berarah <br/>
 ![Screenshot Graph tidak Berarah Matrix](Image/Repgraphtidakberarahmatrix_pic.png)<br/>
 
 2. Representasi graph dalam bentuk linked list
-- Adjacency Linkedlist Graph tak berarah
+- Adjacency Linkedlist Graph tak berarah <br/>
 ![Screenshot Graph tidak Berarah Linked List](Image/Repgraphtidakberarahlinkedlist_pic.png)<br/>
 
 ### 2. Tree
@@ -54,37 +59,37 @@ Istilah-istilah pada Graph:
 Tree adalah struktur data non linier berbentuk hierarki yang terdiri dari sekumpulan node yang berbeda. Hierarki pada struktur tree dapat diibaratkan seperti sebuah pohon keluarga di mana terdapat hubungan antara orang tua dan anak. Titik yang lebih atas disebut simpul induk sedangkan simpul di bawahnya adalah simpul anak.
 
 Istilah-istilah pada tree:
-1. Node
+1. Node <br/>
 Node atau simpul adalah entitas pada struktur data tree yang mengandung sebuah nilai dan pointer yang menunjuk simpul di bawahnya (child node).
 
-2. Child node
+2. Child node <br/>
 Child node atau simpul anak adalah simpul turunan dari simpul di atasnya.
 
-3. Leaf Node
+3. Leaf Node <br/>
 Leaf node atau simpul daun adalah simpul yang tidak memiliki child node dan merupakan node yang paling bawah dalam struktur data tree. Simpul ini biasa disebut juga sebagai external node
 
-3. Root
+3. Root <br/>
 Root atau akar adalah simpul teratas dari sebuah tree.
 
-4. Internal node
+4. Internal node <br/>
 Internal node adalah istilah untuk menyebut simpul yang memiliki minimal satu child node.
-
-5. Edge
+ 
+5. Edge <br/>
 Edge merujuk pada garis yang menghubungkan antara dua buah simpul dalam tree. Jika sebuah tree memiliki N node maka tree tersebut akan memiliki (N-1) edge. Hanya ada satu jalur dari setiap simpul ke simpul lainnya.
 
-6. Height of node
+6. Height of node <br/>
 Height of node adalah jumlah edge dari sebuah node ke leaf node yang paling dalam.
 
-7. Depth of node
+7. Depth of node <br/>
 Depth of node adalah banyaknya edge dari root ke sebuah node.
 
-8. Height of tree
+8. Height of tree <br/>
 Height of tree dapat diartikan sebagai panjang jalur terpanjang dari simpul akar ke simpul daun dari seuah tree.
 
-9. Degree of node
+9. Degree of node <br/>
 Jumlah cabang yang melekat pada simpul disebut Degree of node atau derajat simpul. Derajat simpul pada sebuah leaf node adalah 0. Selain Degree of node, terdapat juga Degree of tree yaitu derajat maksimum simpul di antara semua simpul pada tree.
 
-10. Subtree
+10. Subtree <br/>
 Subtree adalah setiap simpul dari tree beserta turunannya.
 
 #### B. Karakteristik Tree
@@ -99,16 +104,16 @@ Karakteristik dari struktur data tree, yaitu:
 
 Struktur data tree dapat diklasifikasikan ke dalam 4 jenis, yaitu:
 
-1. General tree
+1. General tree <br/>
 Struktur data tree yang tidak memiliki batasan jumlah node pada hierarki tree disebut General tree. Setiap simpul atau node bebas memiliki berapapun child node. Tree jenis adalah superset dari semua jenis tree.
 
-2. Binary tree  
+2. Binary tree  <br/>
 Binary tree adalah jenis tree yang simpulnya hanya dapat memiliki paling banyak 2 simpul anak (child node). Kedua simpul tersebut biasa disebut simpul kiri (left node) dan simpul kanan (right node). Tree tipe ini lebih populer daripada jenis lainnya.
 
-3. Balanced tree
+3. Balanced tree <br/>
 Apabila tinggi dari subtree sebelah kiri dan subtree sebelah kanan sama atau kalaupun berbeda hanya berbeda 1, maka disebut sebagai balanced tree. 
 
-4. Binary search tree
+4. Binary search tree <br/>
 Sesuai dengan namanya, Binary search tree digunakan untuk berbagai algoritma pencarian dan pengurutan. Contohnya seperti AVL tree dan Red-black tree. Struktur data tree jenis ini memiliki nilai pada simpul sebelah kiri lebih kecil daripada induknya. Sedangkan nilai simpul sebelah kanan lebih besar dari induknya.
 
 
