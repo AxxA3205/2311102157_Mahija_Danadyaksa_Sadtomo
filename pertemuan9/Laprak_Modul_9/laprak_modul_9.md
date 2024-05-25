@@ -22,14 +22,14 @@ Istilah-istilah pada Graph:
 5. Adjacent, adalah dua buah titik dikatakan berdekatan (adjacent) jika dua buah titik tersebut terhubung dengan sebuah sisi. <br/>
 
 #### B. Jenis Graph
-Berdasarkan orientasi arah sisi nya, graph dapat dibedakan menjadi 2 yaitu :
+Berdasarkan orientasi arah sisi nya, graph dapat dibedakan menjadi 2 yaitu : <br/>
 1. Graf berarah (Directed graph) adalah graph yang setiap sisi nya memiliki orientasi arah. <br/>
 ![Screenshot Graph Berarah](Image/Graphberarah_pic.png)<br/>
 
 2. Graf tak berarah (Undirected graph) adalah graph yang sisi nya tidak memiliki orientasi arah. <br/>
 ![Screenshot Graph Tidak Berarah](Image/Graphtidakberarah_pic.png)<br/>
 
-berdasarkan ada tidaknya label bobot pada koneksinya, yaitu:
+berdasarkan ada tidaknya label bobot pada koneksinya, yaitu: <br/>
 3. Graf berbobot (Weight Graph) adalah graph dimana setiap cabang diberi bobot numerik
 ![Screenshot Graph Berbobot](Image/Graphberbobot_pic.png)<br/>
 
