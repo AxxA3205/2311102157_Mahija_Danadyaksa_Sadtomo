@@ -652,9 +652,9 @@ Pertama import library iostream dan iomanip untuk kebutuhan input dan output. Se
 
 
 ```C++
-#include <iostream> // Library standar yang digunakan untuk input dan output
-#include <queue>   // Library standar yang digunakan untuk queue
-using namespace std; // Untuk mempersingkat penulisan kode program 
+#include <iostream>  // Library standar yang digunakan untuk input dan output
+#include <queue>     // Library standar yang digunakan untuk queue
+using namespace std; // Untuk mempersingkat penulisan kode program
 
 struct Pohon // Struct yang berisi data node tree
 {
@@ -745,7 +745,7 @@ void update(char data, Pohon *node) // Fungsi untuk mengubah data node
     }
 }
 
-void retrieve(Pohon *node) // Fungsi untuk menampilkan data node 
+void retrieve(Pohon *node) // Fungsi untuk menampilkan data node
 {
     if (!node)
     {
@@ -887,7 +887,7 @@ int height(Pohon *node = root) // Fungsi untuk menghitung tinggi tree
     }
 }
 
-void characteristic() // Fungsi untuk menampilkan karakteristik tree    
+void characteristic() // Fungsi untuk menampilkan karakteristik tree
 {
     cout << "\nSize Tree: " << size() << endl;
     cout << "Height Tree: " << height() << endl;
@@ -896,10 +896,48 @@ void characteristic() // Fungsi untuk menampilkan karakteristik tree
         cout << "Average Node of Tree: " << (double)size() / height() << endl;
     }
 }
+void TampilChild_Descendants(Pohon *node) // Fungsi untuk menampilkan child dan descendant dari node
+{
+    if (!node)
+    {
+        cout << "\nNode yang ditunjuk tidak ada!" << endl;
+    }
+    else
+    {
+        cout << "\nNode: " << node->data << endl;
+        if (node->left)
+            cout << "Child Kiri: " << node->left->data << endl;
+        else
+            cout << "Child Kiri: (tidak punya Child kiri)" << endl;
+
+        if (node->right)
+            cout << "Child Kanan: " << node->right->data << endl;
+        else
+            cout << "Child Kanan: (tidak punya Child kanan)" << endl;
+
+        cout << "Descendants:" << endl;
+        queue<Pohon *> q;
+        if (node->left)
+            q.push(node->left);
+        if (node->right)
+            q.push(node->right);
+        while (!q.empty())
+        {
+            Pohon *current = q.front();
+            q.pop();
+            cout << " " << current->data << ", ";
+            if (current->left)
+                q.push(current->left);
+            if (current->right)
+                q.push(current->right);
+        }
+        cout << endl;
+    }
+}
 
 void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
 {
-    char choice;
+    int choice;
     do
     {
         cout << "\nMenu:\n";
@@ -911,14 +949,15 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
         cout << "6. Hapus Subtree\n";
         cout << "7. Clear Tree\n";
         cout << "8. Karakteristik Tree\n";
-        cout << "9. Exit\n";
+        cout << "9. Display Child dan Descendants\n";
+        cout << "10. Exit\n";
         cout << "Pilih opsi: ";
         cin >> choice;
         char data, parentData;
         Pohon *parentNode = nullptr;
         switch (choice)
         {
-        case '1': // Buat Node
+        case 1: // Buat Node
             if (isEmpty())
             {
                 cout << "Masukkan data root: ";
@@ -937,7 +976,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 parentNode = nullptr;
                 queue<Pohon *> q;
                 q.push(root);
-                while (!q.empty()) 
+                while (!q.empty())
                 {
                     Pohon *node = q.front();
                     q.pop();
@@ -972,8 +1011,8 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 }
             }
             break;
-        case '2': // Update Node
-            if (!isEmpty()) 
+        case 2: // Update Node
+            if (!isEmpty())
             {
                 cout << "Masukkan data node baru: ";
                 cin >> data;
@@ -1011,7 +1050,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '3': // Retrieve Node
+        case 3: // Retrieve Node
             if (!isEmpty())
             {
                 cout << "Masukkan data node yang ingin diretrieve: ";
@@ -1048,7 +1087,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '4': // Find Node
+        case 4: // Find Node
             if (!isEmpty())
             {
                 cout << "Masukkan data node yang ingin dicari: ";
@@ -1085,7 +1124,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '5': // Travers Data
+        case 5: // Travers Data
             if (!isEmpty())
             {
                 cout << "\nPreOrder Traversal:" << endl;
@@ -1103,7 +1142,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '6': // Hapus Subtree
+        case 6: // Hapus Subtree
             if (!isEmpty())
             {
                 cout << "Masukkan data node subtree yang ingin dihapus: ";
@@ -1140,14 +1179,51 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '7': // Clear Tree
+        case 7: // Clear Tree
             clear();
             break;
-        case '8': // Karakteristik Tree
+        case 8: // Karakteristik Tree
             characteristic();
             break;
-        case '9': // Exit
-            cout << "Keluar dari program." << endl;
+        case 9: // Display Child dan Descendants
+            if (!isEmpty())
+            {
+                cout << "Masukkan data node yang ingin ditampilkan child dan descendants: ";
+                cin >> data;
+                parentNode = nullptr;
+                // Cari node yang ingin ditampilkan child dan descendants menggunakan BFS
+                queue<Pohon *> q;
+                q.push(root);
+                while (!q.empty())
+                {
+                    Pohon *node = q.front();
+                    q.pop();
+                    if (node->data == data)
+                    {
+                        parentNode = node;
+                        break;
+                    }
+                    if (node->left)
+                        q.push(node->left);
+                    if (node->right)
+                        q.push(node->right);
+                }
+                if (parentNode)
+                {
+                    TampilChild_Descendants(parentNode);
+                }
+                else
+                {
+                    cout << "Node yang ingin ditampilkan child dan descendants tidak ditemukan!" << endl;
+                }
+            }
+            else
+            {
+                cout << "Buat tree terlebih dahulu!" << endl;
+            }
+            break;
+            case 10: // Exit
+            cout << "Terima kasih telah menggunakan program ini!" << endl;
             break;
         default: // Opsi tidak valid
             cout << "Opsi tidak valid!" << endl;
@@ -1158,7 +1234,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
 
 int main() // Fungsi utama program
 {
-    init(); 
+    init();
     mahijaDanadyaksaSadtomo_2311102157();
     return 0;
 }
@@ -1183,18 +1259,40 @@ int main() // Fungsi utama program
 
 Program di atas adalah program modifikasi dari guided 2 yang menggunakan tree untuk menyimpan data node. Perbedaannya dari guided 2 adalah inputan dari program ini diambil dari pengguna.
 Program ini memiliki beberapa fungsi, yaitu:
-1. Buat Node: Fungsi untuk membuat node baru. Jika tree masih kosong, node yang dibuat akan menjadi root. Jika tree sudah ada, pengguna dapat memilih apakah node baru akan menjadi child kiri atau child kanan dari node tertentu.
-2. Update Node: Fungsi untuk mengubah data node yang sudah ada.
-3. Retrieve Node: Fungsi untuk menampilkan data node yang sudah ada.
-4. Find Node: Fungsi untuk menampilkan karakteristik node yang sudah ada, seperti parent, sibling, child kiri, dan child kanan.
-5. Travers Data: Fungsi untuk melakukan preOrder, inOrder, dan postOrder traversal.
-6. Hapus Subtree: Fungsi untuk menghapus subtree dari node tertentu.
-7. Clear Tree: Fungsi untuk menghapus seluruh tree.
-8. Karakteristik Tree: Fungsi untuk menampilkan karakteristik tree, seperti size, height, dan rata-rata node.
-9. Exit: Fungsi untuk keluar dari program.
-10. Mahija Danadyaksa Sadtomo_2311102157: Fungsi untuk menampilkan menu.
-11. init: Fungsi untuk inisialisasi tree.
+1. buatNode(): Fungsi untuk membuat node tree. Jika tree masih kosong, maka node yang dibuat akan menjadi root. Jika tree sudah ada, maka pengguna dapat memilih apakah node yang dibuat akan menjadi child kiri atau child kanan dari node tertentu.
+2. insertRight(): Fungsi untuk menambahkan node ke child kanan dari node tertentu.
+3. insertLeft(): Fungsi untuk menambahkan node ke child kiri dari node tertentu.
+4. update(): Fungsi untuk mengubah data node.
+5. retrieve(): Fungsi untuk menampilkan data node.
+6. find(): Fungsi untuk mencari node.
+7. preOrder(): Fungsi untuk melakukan preOrder traversal.
+8. inOrder(): Fungsi untuk melakukan inOrder traversal.
+9. postOrder(): Fungsi untuk melakukan postOrder traversal.
+10. deleteTree(): Fungsi untuk menghapus tree.
+11. deleteSub(): Fungsi untuk menghapus subtree.
+12. clear(): Fungsi untuk menghapus tree.
+13. size(): Fungsi untuk menghitung jumlah node tree.
+14. height(): Fungsi untuk menghitung tinggi tree.
+15. characteristic(): Fungsi untuk menampilkan karakteristik tree.
+16. TampilChild_Descendants(): Fungsi untuk menampilkan child dan descendant dari node.
+17. mahijaDanadyaksaSadtomo_2311102157(): Fungsi untuk menampilkan menu.
+18. main(): Fungsi utama program.
 Pertama, program akan menampilkan menu. Pengguna dapat memilih opsi yang diinginkan dengan memasukkan angka yang sesuai. Program akan mengeksekusi fungsi sesuai dengan opsi yang dipilih pengguna. Program akan berjalan terus menerus hingga pengguna memilih opsi 9 untuk keluar dari program.
+Yang programmer lakukan pada hasil run tersebut yaitu:
+1. Membuat node root dengan data 'A'.
+2. Menambahkan node 'B' ke child kiri node 'A'.
+3. Menambahkan node 'C' ke child kanan node 'A'.
+4. Menambahkan node 'D' ke child kiri node 'B'.
+5. Menambahkan node 'E' ke child kanan node 'B'.
+6. Menambahkan node 'F' ke child kiri node 'C'.
+7. Menambahkan node 'H' ke child kanan node 'C'.
+8. Mengupdate data node 'H' menjadi 'G'.
+9. Melakukan retrieve data node 'H' dan muncul tidak ada node 'H'.
+10. Melakukan find node 'G' dan muncul data-data node 'G' Seperti root, child, sibling, dll.
+11. Melakukan preOrder, inOrder, dan  postOrder traversal.
+12. Menghapus subtree node 'C'.
+13. Menampilkan Node child dan descendants node 'B'.
+14. Clear tree.
 
 ## Kesimpulan
 <p> Graph adalah jenis struktur data umum yang susunan datanya tidak berdekatan satu sama lain (non-linier). Graph terdiri dari kumpulan simpul berhingga untuk menyimpan data dan antara dua buah simpul terdapat hubungan saling keterkaitan. Graph dapat dibedakan berdasarkan arah jelajahnya dan ada tidaknya label bobot pada relasinya. Berdasarkan arah jelajahnya graph dibagi menjadi Undirected graph dan Directed graph. Selain arah jelajahnya, graph dapat dibagi menjadi 2 berdasarkan ada tidaknya label bobot pada koneksinya, yaitu weighted graph dan unweighted graph. <p> <br/>

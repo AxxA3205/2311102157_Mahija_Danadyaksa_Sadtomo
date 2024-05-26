@@ -1,6 +1,6 @@
-#include <iostream> // Library standar yang digunakan untuk input dan output
-#include <queue>   // Library standar yang digunakan untuk queue
-using namespace std; // Untuk mempersingkat penulisan kode program 
+#include <iostream>  // Library standar yang digunakan untuk input dan output
+#include <queue>     // Library standar yang digunakan untuk queue
+using namespace std; // Untuk mempersingkat penulisan kode program
 
 struct Pohon // Struct yang berisi data node tree
 {
@@ -91,7 +91,7 @@ void update(char data, Pohon *node) // Fungsi untuk mengubah data node
     }
 }
 
-void retrieve(Pohon *node) // Fungsi untuk menampilkan data node 
+void retrieve(Pohon *node) // Fungsi untuk menampilkan data node
 {
     if (!node)
     {
@@ -233,7 +233,7 @@ int height(Pohon *node = root) // Fungsi untuk menghitung tinggi tree
     }
 }
 
-void characteristic() // Fungsi untuk menampilkan karakteristik tree    
+void characteristic() // Fungsi untuk menampilkan karakteristik tree
 {
     cout << "\nSize Tree: " << size() << endl;
     cout << "Height Tree: " << height() << endl;
@@ -242,10 +242,48 @@ void characteristic() // Fungsi untuk menampilkan karakteristik tree
         cout << "Average Node of Tree: " << (double)size() / height() << endl;
     }
 }
+void TampilChild_Descendants(Pohon *node) // Fungsi untuk menampilkan child dan descendant dari node
+{
+    if (!node)
+    {
+        cout << "\nNode yang ditunjuk tidak ada!" << endl;
+    }
+    else
+    {
+        cout << "\nNode: " << node->data << endl;
+        if (node->left)
+            cout << "Child Kiri: " << node->left->data << endl;
+        else
+            cout << "Child Kiri: (tidak punya Child kiri)" << endl;
+
+        if (node->right)
+            cout << "Child Kanan: " << node->right->data << endl;
+        else
+            cout << "Child Kanan: (tidak punya Child kanan)" << endl;
+
+        cout << "Descendants:" << endl;
+        queue<Pohon *> q;
+        if (node->left)
+            q.push(node->left);
+        if (node->right)
+            q.push(node->right);
+        while (!q.empty())
+        {
+            Pohon *current = q.front();
+            q.pop();
+            cout << " " << current->data << ", ";
+            if (current->left)
+                q.push(current->left);
+            if (current->right)
+                q.push(current->right);
+        }
+        cout << endl;
+    }
+}
 
 void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
 {
-    char choice;
+    int choice;
     do
     {
         cout << "\nMenu:\n";
@@ -257,14 +295,15 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
         cout << "6. Hapus Subtree\n";
         cout << "7. Clear Tree\n";
         cout << "8. Karakteristik Tree\n";
-        cout << "9. Exit\n";
+        cout << "9. Display Child dan Descendants\n";
+        cout << "10. Exit\n";
         cout << "Pilih opsi: ";
         cin >> choice;
         char data, parentData;
         Pohon *parentNode = nullptr;
         switch (choice)
         {
-        case '1': // Buat Node
+        case 1: // Buat Node
             if (isEmpty())
             {
                 cout << "Masukkan data root: ";
@@ -283,7 +322,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 parentNode = nullptr;
                 queue<Pohon *> q;
                 q.push(root);
-                while (!q.empty()) 
+                while (!q.empty())
                 {
                     Pohon *node = q.front();
                     q.pop();
@@ -318,8 +357,8 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 }
             }
             break;
-        case '2': // Update Node
-            if (!isEmpty()) 
+        case 2: // Update Node
+            if (!isEmpty())
             {
                 cout << "Masukkan data node baru: ";
                 cin >> data;
@@ -357,7 +396,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '3': // Retrieve Node
+        case 3: // Retrieve Node
             if (!isEmpty())
             {
                 cout << "Masukkan data node yang ingin diretrieve: ";
@@ -394,7 +433,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '4': // Find Node
+        case 4: // Find Node
             if (!isEmpty())
             {
                 cout << "Masukkan data node yang ingin dicari: ";
@@ -431,7 +470,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '5': // Travers Data
+        case 5: // Travers Data
             if (!isEmpty())
             {
                 cout << "\nPreOrder Traversal:" << endl;
@@ -449,7 +488,7 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '6': // Hapus Subtree
+        case 6: // Hapus Subtree
             if (!isEmpty())
             {
                 cout << "Masukkan data node subtree yang ingin dihapus: ";
@@ -486,14 +525,51 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
                 cout << "Buat tree terlebih dahulu!" << endl;
             }
             break;
-        case '7': // Clear Tree
+        case 7: // Clear Tree
             clear();
             break;
-        case '8': // Karakteristik Tree
+        case 8: // Karakteristik Tree
             characteristic();
             break;
-        case '9': // Exit
-            cout << "Keluar dari program." << endl;
+        case 9: // Display Child dan Descendants
+            if (!isEmpty())
+            {
+                cout << "Masukkan data node yang ingin ditampilkan child dan descendants: ";
+                cin >> data;
+                parentNode = nullptr;
+                // Cari node yang ingin ditampilkan child dan descendants menggunakan BFS
+                queue<Pohon *> q;
+                q.push(root);
+                while (!q.empty())
+                {
+                    Pohon *node = q.front();
+                    q.pop();
+                    if (node->data == data)
+                    {
+                        parentNode = node;
+                        break;
+                    }
+                    if (node->left)
+                        q.push(node->left);
+                    if (node->right)
+                        q.push(node->right);
+                }
+                if (parentNode)
+                {
+                    TampilChild_Descendants(parentNode);
+                }
+                else
+                {
+                    cout << "Node yang ingin ditampilkan child dan descendants tidak ditemukan!" << endl;
+                }
+            }
+            else
+            {
+                cout << "Buat tree terlebih dahulu!" << endl;
+            }
+            break;
+            case 10: // Exit
+            cout << "Terima kasih telah menggunakan program ini!" << endl;
             break;
         default: // Opsi tidak valid
             cout << "Opsi tidak valid!" << endl;
@@ -504,8 +580,9 @@ void mahijaDanadyaksaSadtomo_2311102157() // Fungsi untuk menampilkan menu
 
 int main() // Fungsi utama program
 {
-    init(); 
+    init();
     mahijaDanadyaksaSadtomo_2311102157();
     return 0;
 }
+
 
